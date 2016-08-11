@@ -1,0 +1,19 @@
+html {
+  height: 100%;
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC";
+  height: 100%;
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden
+}
+.clearfix {
+  *+height: 1%;
+}
