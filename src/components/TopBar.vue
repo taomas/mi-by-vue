@@ -3,7 +3,7 @@
 		<div class="top-bar clearfix">
 			<div class="topbar-nav">
 				<ul class="nav-wrap">
-					<li v-for="item in navs" class="nav">
+					<li v-for="item in navs" class="nav clearfix">
 						<a href="#" class="nav-name">{{item['name']}}</a>
 						<span class="nav-separate" v-show="$index !== 8">|</span>
 					</li>
@@ -14,9 +14,26 @@
 				<span class="nav-separate" v-show="$index !== 8">|</span>
 				<a href="#">注册</a>
 			</div>
-			<div class="topbar-cart">
-				<a href="#">购物车<span>0<span></a>
+			<div class="topbar-cart"
+        @mouseenter="evtCartEnter"
+        @mouseleave="evtCartOut">
+				<div class="cart"
+          :class="{'active': cartStatus}">
+					<i class="icon-cart"></i>
+					<a href="#">
+						购物车(
+						<span>0<span>
+							)
+					</a>
+				</div>
+				<div class="cart-list"
+          v-show="cartStatus"
+          transition="expand"
+          >
+					购物车中还没有商品，赶快选购吧！
+				</div>
 			</div>
+
 		</div>
   </div>
 </template>
@@ -35,11 +52,22 @@ export default {
 				{'name': '小米网移动版'},
 				{'name': '问题反馈'},
 				{'name': 'Select Region'}
-			]
+			],
+			timer: '',
+			cartStatus: false
 		}
 	},
 	methods: {
-
+		evtCartEnter: function () {
+      this.cartStatus = true
+      clearInterval(this.timer)
+		},
+    evtCartOut: function () {
+      var self = this
+      this.timer = setTimeout(function () {
+        self.cartStatus = false
+      }, 300)
+    }
 	},
 	components: {
 	// Hello
@@ -56,8 +84,10 @@ export default {
 }
 
 .top-bar {
+	position: relative;
 	width: 1226px;
 	margin: 0 auto;
+	font-size: 12px;
 }
 
 .topbar-nav {
@@ -78,16 +108,91 @@ export default {
 		text-decoration: none;
 		height: 40px;
 		line-height: 40px;
-		padding-left: 10px;
+		padding-left: 5px;
 		& :hover {
 			color: #fff;
 		}
-		& a {
+		.nav-name {
 			display: inline-block;
 			font-size: 12px;
 			color: #b0b0b0;
 			text-decoration: none;
 		}
+		.nav-separate {
+			display: inline-block;
+			color: #b0b0b0;
+			margin-left: 5px;
+		}
 	}
+}
+
+.topbar-info {
+	position: absolute;
+	top: 0;
+	right: 140px;
+	height: 40px;
+	line-height: 40px;
+	a {
+		color: #b0b0b0;
+		text-decoration: none;
+    &:hover {
+      color: #fff;
+    }
+	}
+	span {
+		color: #b0b0b0;
+	}
+}
+
+.topbar-cart {
+	position: relative;
+	float: right;
+	width: 120px;
+	background: #424242;
+	height: 40px;
+	line-height: 40px;
+	cursor: pointer;
+	.active {
+		background: #fff;
+    a {
+      color: #ff6700;
+    }
+    span {
+      color: #ff6700;
+    }
+	}
+	a {
+		display: block;
+		margin-left: 50px;
+		color: #b0b0b0;
+		text-decoration: none;
+	}
+	span {
+		color: #b0b0b0;
+	}
+}
+
+.expand-transition {
+  transition: height 0.3s ease;
+  height: 96px;
+}
+
+
+.expand-enter, .expand-leave {
+  transition: height 0.3s ease;
+  height: 0;
+}
+
+.cart-list {
+	position: absolute;
+	right: 0;
+	top: 40px;
+  width: 316px;
+  /*height: 96px;*/
+  line-height: 96px;
+	text-align: center;
+	color: #b0b0b0;
+	background: #fff;
+	box-shadow: 0 0 5px #ccc;
 }
 </style>
