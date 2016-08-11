@@ -40,7 +40,7 @@
 
 <script>
 export default {
-	data: function () {
+	data () {
 		return {
 			navs: [
 				{'name': '小米商城'},
@@ -194,5 +194,6 @@ export default {
 	color: #b0b0b0;
 	background: #fff;
 	box-shadow: 0 0 5px #ccc;
+  z-index: 10;
 }
 </style>
