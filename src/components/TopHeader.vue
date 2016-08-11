@@ -66,6 +66,7 @@ export default {
 .pic-gif {
 	width: 163px;
 	height: 66px;
+	margin-left: 10px;
 	background: url('../assets/img/win.gif') no-repeat;
 	background-size: 100% 100%;
 }
