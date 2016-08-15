@@ -26,10 +26,12 @@
 				</ul>
 			</div>
 		</div>
+		<header-menu></header-menu>
 	</div>
 </template>
 
 <script>
+import headerMenu from './common/Header-Menu.vue'
 export default {
 	data () {
 		return {
@@ -67,6 +69,9 @@ export default {
 			$('.header-search').removeClass('search-active')
 			$('.search-result').hide()
 		}
+	},
+	components: {
+		'header-menu': headerMenu
 	}
 }
 </script>
@@ -105,18 +110,23 @@ export default {
 }
 
 .header-navs {
+	position: relative;
 }
+
 .navs {
 	margin: 0;
 	padding: 0;
 	list-style: none;
 	.nav {
 		display: inline-block;
-		a {
+		.nav-item {
 			font-size: 16px;
 			padding: 0 10px;
 			text-decoration: none;
 			color: #333;
+			&:hover {
+				color: #ff6700;
+			}
 		}
 	}
 }
