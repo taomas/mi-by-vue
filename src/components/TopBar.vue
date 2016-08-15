@@ -26,10 +26,7 @@
 							)
 					</a>
 				</div>
-				<div class="cart-list"
-          v-show="cartStatus"
-          transition="expand"
-          >
+				<div class="cart-list">
 					购物车中还没有商品，赶快选购吧！
 				</div>
 			</div>
@@ -57,20 +54,30 @@ export default {
 			cartStatus: false
 		}
 	},
+  ready () {
+    console.log($(window).width())
+  },
 	methods: {
 		evtCartEnter: function () {
-      this.cartStatus = true
+      $('.cart-list').show()
+      $('.cart-list').animate({
+        'height': '96px',
+        'opacity': '1'
+      }, 300)
       clearInterval(this.timer)
 		},
     evtCartOut: function () {
-      var self = this
       this.timer = setTimeout(function () {
-        self.cartStatus = false
+        $('.cart-list').animate({
+          'height': '0',
+          'opacity': '0'
+        }, 300, function () {
+          $('.cart-list').hide() // 动画执行完后隐藏该元素
+        })
       }, 300)
     }
 	},
 	components: {
-	// Hello
 	}
 }
 </script>
@@ -172,23 +179,13 @@ export default {
 	}
 }
 
-.expand-transition {
-  transition: height 0.3s ease;
-  height: 96px;
-}
-
-
-.expand-enter, .expand-leave {
-  transition: height 0.3s ease;
-  height: 0;
-}
-
 .cart-list {
+  display: none;
 	position: absolute;
 	right: 0;
 	top: 40px;
   width: 316px;
-  /*height: 96px;*/
+  height: 0;
   line-height: 96px;
 	text-align: center;
 	color: #b0b0b0;
