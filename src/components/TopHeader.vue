@@ -6,7 +6,9 @@
 			<div class="header-navs">
 				<ul class="navs">
 					<li v-for="item in navs" class="nav">
-						<a href="#" class="nav-item">{{item.name}}</a>
+						<a href="#" class="nav-item"
+						@mouseenter="evtHeaderEnter(item.name)"
+						>{{item.name}}</a>
 					</li>
 				</ul>
 			</div>
@@ -26,7 +28,7 @@
 				</ul>
 			</div>
 		</div>
-		<header-menu></header-menu>
+		<header-menu :header-status="headerStatus"></header-menu>
 	</div>
 </template>
 
@@ -35,6 +37,7 @@ import headerMenu from './common/Header-Menu.vue'
 export default {
 	data () {
 		return {
+			headerStatus: false,
 			navs: [
 				{name: '小米手机'},
 				{name: '红米'},
@@ -68,6 +71,12 @@ export default {
 		evtIptBlur () {
 			$('.header-search').removeClass('search-active')
 			$('.search-result').hide()
+		},
+		evtHeaderEnter () {
+			this.headerStatus = true
+		},
+		evtHeaderLeave () {
+			this.headerStatus = false
 		}
 	},
 	components: {
