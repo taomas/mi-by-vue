@@ -318,7 +318,7 @@ export default {
 	height: 230px;
 	background: #fff;
 	box-shadow: 0 1px 5px #ccc;
-	z-index: 11px;
+	z-index: 11;
 	.menus {
 		list-style: none;
 		margin: 0;

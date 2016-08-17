@@ -50,7 +50,7 @@ export default {
 	height: auto;
 	padding: 20px 0;
 	background: rgba(0, 0, 0, 0.3);
-	z-index: 11;
+	z-index: 10;
 }
 .side-left {
 	margin: 0;
