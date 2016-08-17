@@ -32,7 +32,7 @@
 		<div class="header-menu"
 			@mouseenter="evtHeaderEnter()"
 			@mouseleave="evtHeaderLeave()">
-			<ul class="menus">
+			<ul class="menus clearfix">
 				<li class="product" v-for="item in currentPhones">
 					<a :href="item.sourcePath">
 						<img :src="item.imgUrl" alt="" class="product-img"/>
@@ -53,7 +53,7 @@ export default {
 	data () {
 		return {
 			headerStatus: false,
-			tid: '',
+			tids: [],
 			currentPhones: this.xiaomi,
 			xiaomi: [
 				{name: '小米Max', imgUrl: 'http://c1.mifile.cn/f/i/15/goods/nav/maxdingbu!160x110.jpg', sourcePath: 'http://www.mi.com/mimax/', price: '1299元起'},
@@ -92,28 +92,27 @@ export default {
 			],
 			router: [
 				{name: '全新小米路由器', imgUrl: 'http://c1.mifile.cn/f/i/16/goods/nav/mitv3s-43!160x110.jpg', sourcePath: 'http://www.mi.com/mitv3s/43/', price: '699元起'},
-				{name: '小米电视3S 48英寸', imgUrl: 'http://c1.mifile.cn/f/i/15/goods/nav/mitv3s48!160x110.jpg', sourcePath: 'http://www.mi.com/mitv3s/48/', price: '1999元'},
-				{name: '小米电视3 55英寸', imgUrl: 'http://c1.mifile.cn/f/i/15/goods/nav/mitv355!160x110.jpg', sourcePath: 'http://www.mi.com/mitv3/55/', price: '3299元起'},
-				{name: '小米电视3 60英寸', imgUrl: 'http://c1.mifile.cn/f/i/15/goods/nav/mitv3-60!160x110.jpg', sourcePath: 'http://www.mi.com/mitv3/60/', price: '3499元'},
-				{name: '小米电视3S 65英寸 曲面', imgUrl: 'http://c1.mifile.cn/f/i/16/goods/nav/mitv3s-65!160x110.jpg', sourcePath: 'http://www.mi.com/mimax/', price: '8999元'},
-				{name: '小米电视3 70英寸', imgUrl: 'http://c1.mifile.cn/f/i/15/goods/nav/mitv70!160x110.jpg', sourcePath: 'http://www.mi.com/mitv3/70/', price: '8999元'}
+				{name: '小米路由器 3', imgUrl: 'http://c1.mifile.cn/f/i/15/goods/nav/miwifi-3!160x110.jpg', sourcePath: 'http://www.mi.com/miwifi3/', price: '149元'},
+				{name: '小米路由器 mini', imgUrl: 'http://c1.mifile.cn/f/i/15/goods/nav/miwifimini!160x110.jpg', sourcePath: 'http://www.mi.com/miwifimini/', price: '119元'},
+				{name: '小米路由器 3C', imgUrl: 'http://c1.mifile.cn/f/i/15/goods/nav/mitv3-60!160x110.jpg', sourcePath: 'http://www.mi.com/mitv3/60/', price: '99元'},
+				{name: '小米路由器 青春版', imgUrl: 'http://c1.mifile.cn/f/i/15/goods/nav/miwifilite!160x110.jpg', sourcePath: 'http://www.mi.com/miwifilite/', price: '69元'},
+				{name: '小米WiFi放大器', imgUrl: 'http://c1.mifile.cn/f/i/15/goods/nav/wifiExtension!160x110.jpg', sourcePath: 'http://item.mi.com/1153200003.html', price: '35元'}
 			],
 			hardware: [
-				{name: '小米电视3S 43英寸', imgUrl: 'http://c1.mifile.cn/f/i/16/goods/nav/mitv3s-43!160x110.jpg', sourcePath: 'http://www.mi.com/mitv3s/43/', price: '1499元'},
-				{name: '小米电视3S 48英寸', imgUrl: 'http://c1.mifile.cn/f/i/15/goods/nav/mitv3s48!160x110.jpg', sourcePath: 'http://www.mi.com/mitv3s/48/', price: '1999元'},
-				{name: '小米电视3 55英寸', imgUrl: 'http://c1.mifile.cn/f/i/15/goods/nav/mitv355!160x110.jpg', sourcePath: 'http://www.mi.com/mitv3/55/', price: '3299元起'},
-				{name: '小米电视3 60英寸', imgUrl: 'http://c1.mifile.cn/f/i/15/goods/nav/mitv3-60!160x110.jpg', sourcePath: 'http://www.mi.com/mitv3/60/', price: '3499元'},
-				{name: '小米电视3S 65英寸 曲面', imgUrl: 'http://c1.mifile.cn/f/i/16/goods/nav/mitv3s-65!160x110.jpg', sourcePath: 'http://www.mi.com/mimax/', price: '8999元'},
-				{name: '小米电视3 70英寸', imgUrl: 'http://c1.mifile.cn/f/i/15/goods/nav/mitv70!160x110.jpg', sourcePath: 'http://www.mi.com/mitv3/70/', price: '8999元'}
+				{name: '九号平衡车', imgUrl: 'http://c1.mifile.cn/f/i/15/goods/nav/scooter!160x110.jpg', sourcePath: 'http://www.mi.com/scooter/', price: '1999元'},
+				{name: '小米净水器', imgUrl: 'http://c1.mifile.cn/f/i/g/2015/cn-index/water2!160x110.jpg', sourcePath: 'http://www.mi.com/water/', price: '1299元起'},
+				{name: '米家压力IH电饭煲', imgUrl: 'http://c1.mifile.cn/f/i/g/2015/cn-index/dianfanbao!160x110.jpg', sourcePath: 'http://www.mi.com/dianfanbao/', price: '999元'},
+				{name: '小米空气净化器 2', imgUrl: 'http://c1.mifile.cn/f/i/16/goods/nav/air2!160x110.jpg', sourcePath: 'http://www.mi.com/air2/', price: '649元'},
+				{name: '智能摄像机', imgUrl: 'http://c1.mifile.cn/f/i/g/doodle/zhinengyingjian!160x110.jpg', sourcePath: 'http://list.mi.com/accessories/tag?id=shexiangji', price: '149元起'}
 			],
 			navs: [
 				{name: '小米手机', type: 'xiaomi'},
 				{name: '红米', type: 'red'},
 				{name: '平板 · 笔记本', type: 'flats'},
 				{name: '电视', type: 'tv'},
-				{name: '盒子 · 影音', type: 'flats'},
-				{name: '路由器', type: 'flats'},
-				{name: '智能硬件', type: 'flats'},
+				{name: '盒子 · 影音', type: 'box'},
+				{name: '路由器', type: 'router'},
+				{name: '智能硬件', type: 'hardware'},
 				{name: '服务'},
 				{name: '社区'}
 			],
@@ -144,25 +143,34 @@ export default {
 		},
 		evtHeaderEnter (menuType) {
 			const $menu = $('.header-menu')
+			console.log(menuType)
 			if (menuType) {
 				this.currentPhones = this[menuType]
 			}
-			clearTimeout(this.tid)
+			this.tids.forEach((tid) => {
+				clearTimeout(tid)
+			})
 			$menu.show().animate({
 				height: '230px',
 				opacity: '1'
 			}, 300)
+			this.headerStatus = true
 		},
 		evtHeaderLeave () {
 			const $menu = $('.header-menu')
-			this.tid = setTimeout(() => {
+			const self = this
+			var tid = setTimeout(() => {
 				$menu.animate({
 					height: '0',
 					opacity: '0'
 				}, 300, () => {
-					$menu.hide()
+					if (!self.headerStatus) { // fix关闭动画未完成触发显示后会再次关闭bug
+						$menu.hide()
+					}
 				})
 			}, 300)
+			this.tids.push(tid)
+			this.headerStatus = false
 		}
 	},
 	components: {
@@ -273,7 +281,7 @@ export default {
 }
 
 .search-result {
-	/*display: none;*/
+	display: none;
 	position: absolute;
 	left: -1px;
 	top: 50px;
@@ -311,11 +319,12 @@ export default {
 		list-style: none;
 		margin: 0;
 		padding: 30px 0 0 150px;
+		min-width: 1500px;
 		.product {
 			float: left;
-			width: 160px;
 			a {
 				display: block;
+				padding: 0 30px;
 				border-right: 1px solid #ccc;
 			}
 			&:nth-last-child(1) {
@@ -325,6 +334,7 @@ export default {
 			}
 			.product-img {
 				width: 100%;
+				width: 160px;
 				height: 110px;
 			}
 			.product-name {
