@@ -28,6 +28,7 @@ export default {
 		headerStatus: function (newVal, oldVal) {
 			let $menu = $('.header-menu')
 			if (newVal) {
+				console.log(1)
 				this.tid = setTimeout(function () {
 					$menu.show()
 					$menu.animate({
@@ -36,6 +37,7 @@ export default {
 					}, 300)
 				}, 300)
 			} else {
+				console.log(0)
 				clearTimeout(this.tid)
 				$menu.animate({
 					height: '0',
