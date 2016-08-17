@@ -310,11 +310,15 @@ export default {
 }
 
 .header-menu {
+	position: absolute;
+	left: 0;
+	top: 140px;
 	display: none;
 	width: 100%;
 	height: 230px;
 	background: #fff;
 	box-shadow: 0 1px 5px #ccc;
+	z-index: 11px;
 	.menus {
 		list-style: none;
 		margin: 0;
