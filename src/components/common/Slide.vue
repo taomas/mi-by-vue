@@ -3,12 +3,12 @@
 		<span
 			@click="slidePre"
 			class="slide-pre">
-			<i class="fa fa-chevron-right fa-2x fa-fw icon-chevron-right"></i>
+			<i class="fa fa-chevron-right fa-2x fa-fw icon-chevron-left"></i>
 		</span>
 		<span
 			@click="slideNext"
 			class="slide-next">
-			<i class="fa fa-chevron-left fa-2x fa-fw icon-chevron-left"></i>
+			<i class="fa fa-chevron-left fa-2x fa-fw icon-chevron-right"></i>
 		</span>
 		<div
 			class="slide"
