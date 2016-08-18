@@ -6,22 +6,36 @@
 					<i class="fa fa-mobile fa-fw sub-icon"></i>
 					<a href="#">选购手机</a>
 				</li>
+				<div class="line-vertical">
+				</div>
 				<li class="channel">
 					<i class="fa fa-gift fa-fw sub-icon"></i>
 					<a href="#">企业团购</a>
 				</li>
+				<div class="line-vertical">
+				</div>
 				<li class="channel">
 					<i class="fa fa-refresh fa-fw sub-icon"></i>
 					<a href="#">官翻产品</a>
 				</li>
+				<div class="line-horizontal">
+				</div>
+				<div class="line-horizontal">
+				</div>
+				<div class="line-horizontal">
+				</div>
 				<li class="channel">
 					<i class="fa fa-credit-card fa-fw sub-icon"></i>
 					<a href="#">小米移动</a>
 				</li>
+				<div class="line-vertical">
+				</div>
 				<li class="channel">
 					<i class="fa fa-recycle fa-fw sub-icon"></i>
 					<a href="#">以旧换新</a>
 				</li>
+				<div class="line-vertical">
+				</div>
 				<li class="channel">
 					<i class="fa fa-credit-card-alt fa-fw sub-icon"></i>
 					<a href="#">话费充值</a>
@@ -35,12 +49,12 @@
 				</a>
 			</li>
 			<li>
-				<a href="#" class="sub-item">
+				<a href="#" class="sub-item sub-3">
 					<img src="http://i3.mifile.cn/a4/d7136426-ce57-432a-aa12-8224546e0530" alt="" />
 				</a>
 			</li>
 			<li>
-				<a href="#" class="sub-item">
+				<a href="#" class="sub-item sub-4">
 					<img src="http://i3.mifile.cn/a4/615c4599-fd37-4e61-aef6-c30b73330237" alt="" />
 				</a>
 			</li>
@@ -52,6 +66,10 @@
 export default {
 	data () {
 		return {
+		}
+	},
+	methods: {
+		evtSubEnter (selector) {
 		}
 	}
 }
@@ -122,12 +140,30 @@ export default {
 		margin-left: 15px;
 	}
 	.sub-item {
-		width: 316px;
-		height: 170px;
+		display: block;
+		transition: all 0.3s;
+		&:hover {
+			box-shadow: 0 5px 30px #ccc;
+		}
 		img {
+			display: block;
 			width: 316px;
 			height: 170px;
 		}
 	}
+}
+
+.line-vertical {
+	width: 1px;
+	height: 60px;
+	margin-top: 10px;
+	background: rgba(255,255,255,0.1);
+}
+
+.line-horizontal {
+	width: 60px;
+	height: 1px;
+	margin: 0 8px;
+	background: rgba(255,255,255,0.1);
 }
 </style>

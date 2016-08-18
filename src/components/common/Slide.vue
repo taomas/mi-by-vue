@@ -3,16 +3,17 @@
 		<span
 			@click="slidePre"
 			class="slide-pre">
-			<i class="fa fa-chevron-right fa-2x fa-fw icon-chevron-left"></i>
+			<i class="fa fa-chevron-left fa-2x fa-fw icon-chevron-left"></i>
 		</span>
 		<span
 			@click="slideNext"
 			class="slide-next">
-			<i class="fa fa-chevron-left fa-2x fa-fw icon-chevron-right"></i>
+			<i class="fa fa-chevron-right fa-2x fa-fw icon-chevron-right"></i>
 		</span>
 		<div
 			class="slide"
-			:class="{'active': $index === curpage}"
+			transition="fadeIn"
+			v-show="$index === curpage"
 			v-for="item in banners">
 			<img :src="item.sourcePath" alt="" />
 		</div>
@@ -105,21 +106,16 @@ export default {
 }
 
 .slide {
-	display: none;
 	position: absolute;
 	left: 0;
 	top: 0;
 	width: 1226px;
 	height: 460px;
-	transition: 0.4s ease-in-out transform, opacity;
+	transition: all 0.3s;
 	img {
 		width: 100%;
 		height: 100%;
 	}
-}
-
-.active {
-	display: block;
 }
 
 .icon-chevron-left, .icon-chevron-right {
@@ -131,6 +127,18 @@ export default {
 	margin-left: -15px;
 	margin-top: -15px;
 	color: #ecf0f1;
+}
+
+/* 必需 */
+.fadeIn-transition {
+  transition: all .5s ease;
+	opacity: 1;
+}
+
+/* .expand-enter 定义进入的开始状态 */
+/* .expand-leave 定义离开的结束状态 */
+.fadeIn-enter, .fadeIn-leave {
+  opacity: 0;
 }
 
 /*.icon-chevron-left {
