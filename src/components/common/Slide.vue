@@ -1,23 +1,54 @@
 <template>
 	<div class="banner">
-		<span class="slide-pre"></span>
-		<span class="slide-next"></span>
-		<div class="slide active">
-			<img src="http://i3.mifile.cn/a4/ef9c4e97-2971-495c-987d-bd3f3b1b7b58" alt="" />
-		</div>
-		<div class="slide">
-			<img src="http://i3.mifile.cn/a4/3c788170-183e-4f26-b00b-6ef1b743906c" alt="" />
-		</div>
-		<div class="slide">
-			<img src="http://i3.mifile.cn/a4/67c4e203-f46b-4e58-8da2-859d69c313fb" alt="" />
+		<span
+			@click="slidePre"
+			class="slide-pre">
+			<i class="icon-chevron-left"></i>
+		</span>
+		<span
+			@click="slideNext"
+			class="slide-next">
+			<i class="icon-chevron-right"></i>
+		</span>
+		<div
+			class="slide"
+			:class="{'active': $index === curpage}"
+			v-for="item in banners">
+			<img :src="item.sourcePath" alt="" />
 		</div>
 	</div>
 </template>
 
 <script>
 export default {
+	data () {
+		return {
+			curpage: 0,
+			slideDirection: 1
+		}
+	},
+	props: {
+		banners: {
+			type: Array,
+      required: true
+		}
+	},
 	methods: {
 		slideNext () {
+			const lastPage = this.banners.length - 1
+			if (this.curpage < lastPage) {
+				this.curpage += 1
+			} else {
+				this.curpage = 0
+			}
+		},
+		slidePre () {
+			const lastPage = this.banners.length - 1
+			if (this.curpage > 0) {
+				this.curpage -= 1
+			} else {
+				this.curpage = lastPage
+			}
 		}
 	}
 }
@@ -27,7 +58,7 @@ export default {
 .banner {
 	position: relative;
 	width: 1226px;
-	height: 462px;
+	height: 460px;
 	z-index: 0;
 }
 
@@ -39,9 +70,12 @@ export default {
 	width: 40px;
 	height: 70px;
 	margin-top: -35px;
-	background: #ccc;
+	/*background: #ccc;*/
 	z-index: 10;
 	cursor: pointer;
+	&:hover{
+		background: rgba(0, 0, 0, 0.3);
+	}
 }
 
 .slide-next {
@@ -52,9 +86,12 @@ export default {
 	width: 40px;
 	height: 70px;
 	margin-top: -35px;
-	background: #ccc;
+	/*background: #fff;*/
 	z-index: 10;
 	cursor: pointer;
+	&:hover{
+		background: rgba(0, 0, 0, 0.3);
+	}
 }
 
 .slide {
@@ -62,12 +99,36 @@ export default {
 	position: absolute;
 	left: 0;
 	top: 0;
-	width: 100%;
-	height: 100%;
+	width: 1226px;
+	height: 460px;
 	transition: 0.4s ease-in-out transform, opacity;
+	img {
+		width: 100%;
+		height: 100%;
+	}
 }
 
 .active {
 	display: block;
+}
+
+.icon-chevron-left, .icon-chevron-right {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 30px;
+	height: 30px;
+	margin-left: -15px;
+	margin-top: -15px;
+}
+
+.icon-chevron-left {
+	background: url('../../assets/img/chevron-left.png');
+	background-size: 100% 100%;
+}
+
+.icon-chevron-right {
+	background: url('../../assets/img/chevron-right.png');
+	background-size: 100% 100%;
 }
 </style>

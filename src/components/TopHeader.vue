@@ -291,6 +291,8 @@ export default {
 	padding: 0;
 	list-style: none;
 	border: 1px solid #ff6700;
+	z-index: 11;
+	background: #fff;
 	li {
 		padding: 7px 13px;
 		width: 100%;

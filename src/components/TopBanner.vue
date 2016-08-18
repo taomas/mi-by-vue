@@ -7,7 +7,7 @@
 				</li>
 			</ul>
 		</div>
-		<slide></slide>
+		<slide :banners="banners"></slide>
 		<!-- <div class="site-banner">
 			<a href="#" class="slide"></a>
 		</div> -->
@@ -52,6 +52,7 @@ export default {
 	background: rgba(0, 0, 0, 0.3);
 	z-index: 10;
 }
+
 .side-left {
 	margin: 0;
 	padding: 0;
