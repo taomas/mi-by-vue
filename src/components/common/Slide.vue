@@ -3,12 +3,12 @@
 		<span
 			@click="slidePre"
 			class="slide-pre">
-			<i class="icon-chevron-left"></i>
+			<i class="fa fa-chevron-right fa-2x fa-fw icon-chevron-right"></i>
 		</span>
 		<span
 			@click="slideNext"
 			class="slide-next">
-			<i class="icon-chevron-right"></i>
+			<i class="fa fa-chevron-left fa-2x fa-fw icon-chevron-left"></i>
 		</span>
 		<div
 			class="slide"
@@ -23,6 +23,7 @@
 export default {
 	data () {
 		return {
+			prevTid: '',
 			curpage: 0,
 			slideDirection: 1
 		}
@@ -32,6 +33,9 @@ export default {
 			type: Array,
       required: true
 		}
+	},
+	ready () {
+		this.autoSlide()
 	},
 	methods: {
 		slideNext () {
@@ -49,6 +53,12 @@ export default {
 			} else {
 				this.curpage = lastPage
 			}
+		},
+		autoSlide () {
+			clearInterval(this.prevTid)
+			this.prevTid = setInterval(() => {
+				this.slideNext()
+			}, 5000)
 		}
 	}
 }
@@ -120,9 +130,10 @@ export default {
 	height: 30px;
 	margin-left: -15px;
 	margin-top: -15px;
+	color: #ecf0f1;
 }
 
-.icon-chevron-left {
+/*.icon-chevron-left {
 	background: url('../../assets/img/chevron-left.png');
 	background-size: 100% 100%;
 }
@@ -130,5 +141,5 @@ export default {
 .icon-chevron-right {
 	background: url('../../assets/img/chevron-right.png');
 	background-size: 100% 100%;
-}
+}*/
 </style>
