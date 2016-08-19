@@ -2,17 +2,23 @@
 	<div class="goods-container">
 		<goods-top-box></goods-top-box>
 		<goods-collocation></goods-collocation>
+		<goods-accessories></goods-accessories>
+		<goods-around></goods-around>
 	</div>
 </template>
 
 <script>
 import GoodsTopBox from './GoodsTopBox'
 import GoodsCollocation from './GoodsCollocation'
+import GoodsAccessories from './GoodsAccessories'
+import GoodsAround from './GoodsAround'
 
 export default {
 	components: {
 		'goods-top-box': GoodsTopBox,
-		'goods-collocation': GoodsCollocation
+		'goods-collocation': GoodsCollocation,
+		'goods-accessories': GoodsAccessories,
+		'goods-around': GoodsAround
 	}
 }
 </script>

@@ -21,16 +21,17 @@ import GoodsRight from './common/GoodsRight'
 export default {
 	data () {
 		return {
-			topTitle: '搭配',
+			topTitle: '周边',
 			subs: [
 				{name: '热门', key: 'hot'},
-				{name: '耳机音响', key: 'clothes'},
-				{name: '电源', key: 'rabbit'},
-				{name: '电池存储卡', key: 'around'}
+				{name: '服装', key: 'clothes'},
+				{name: '米兔', key: 'rabbit'},
+				{name: '生活周边', key: 'around'},
+				{name: '箱包', key: 'bags'}
 			],
 			leftGoods: [
-				{imgUrl: 'http://i3.mifile.cn/a4/54581b2c-f88d-4415-9754-af83116346bd'},
-				{imgUrl: 'http://i3.mifile.cn/a4/f7da6234-7159-414a-a2ea-8832af89b4f1'}
+				{imgUrl: 'http://i3.mifile.cn/a4/ff2a2f99-2c69-4472-acc1-e16322ee79ba'},
+				{imgUrl: 'http://i3.mifile.cn/a4/c2b64ac9-0b29-4158-a4ab-66aca1720916'}
 			],
 			hotGoods: [
 				{imgUrl: 'http://i2.mifile.cn/a1/T1eSZgBjVT1RXrhCrK.jpg?width=150&height=150', 'title': '小米移动电源10000mAh 高配版', price: '129', oldPrice: '149', heat: '2',
