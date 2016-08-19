@@ -4,6 +4,7 @@
 		<goods-collocation></goods-collocation>
 		<goods-accessories></goods-accessories>
 		<goods-around></goods-around>
+		<recommend></recommend>
 	</div>
 </template>
 
@@ -12,13 +13,15 @@ import GoodsTopBox from './GoodsTopBox'
 import GoodsCollocation from './GoodsCollocation'
 import GoodsAccessories from './GoodsAccessories'
 import GoodsAround from './GoodsAround'
+import Recommend from './Recommend'
 
 export default {
 	components: {
 		'goods-top-box': GoodsTopBox,
 		'goods-collocation': GoodsCollocation,
 		'goods-accessories': GoodsAccessories,
-		'goods-around': GoodsAround
+		'goods-around': GoodsAround,
+		'recommend': Recommend
 	}
 }
 </script>
