@@ -34,21 +34,21 @@ export default {
 				{imgUrl: 'http://i3.mifile.cn/a4/c2b64ac9-0b29-4158-a4ab-66aca1720916'}
 			],
 			hotGoods: [
-				{imgUrl: 'http://i2.mifile.cn/a1/T1eSZgBjVT1RXrhCrK.jpg?width=150&height=150', 'title': '小米移动电源10000mAh 高配版', price: '129', oldPrice: '149', heat: '2',
+				{imgUrl: 'http://i3.mifile.cn/a4/T1IDC_B_Kv1RXrhCrK.jpg', 'title': '小米V领短袖T恤 男款', price: '129', oldPrice: '149', heat: '2',
 				reviewDesc: '比我以前买的小米充电宝砖头好太多了！放在包里不占位置...', reviewAuthor: '龚毅祥', reviewStatus: true},
-				{imgUrl: 'http://i2.mifile.cn/a1/T1eSZgBjVT1RXrhCrK.jpg?width=150&height=150', 'title': '小米移动电源10000mAh 高配版', price: '129', oldPrice: '149', heat: '2',
+				{imgUrl: 'http://i3.mifile.cn/a4/e8f5a80c-7f57-4f7b-97fc-c446059d2381', 'title': '小米短袖T恤 水管工米兔', price: '129', oldPrice: '149', heat: '2',
 				reviewDesc: '比我以前买的小米充电宝砖头好太多了！放在包里不占位置...', reviewAuthor: '龚毅祥', reviewStatus: true},
-				{imgUrl: 'http://i2.mifile.cn/a1/T1eSZgBjVT1RXrhCrK.jpg?width=150&height=150', 'title': '小米移动电源10000mAh 高配版', price: '129', oldPrice: '149', heat: '2',
+				{imgUrl: 'http://i3.mifile.cn/a4/d3897b3a-59b4-4cdb-a726-f318f0ee44b6', 'title': '小米短袖T恤 新国货', price: '129', oldPrice: '149', heat: '2',
 				reviewDesc: '比我以前买的小米充电宝砖头好太多了！放在包里不占位置...', reviewAuthor: '龚毅祥', reviewStatus: true},
-				{imgUrl: 'http://i2.mifile.cn/a1/T1eSZgBjVT1RXrhCrK.jpg?width=150&height=150', 'title': '小米移动电源10000mAh 高配版', price: '129', oldPrice: '149', heat: '2',
+				{imgUrl: 'http://i3.mifile.cn/a4/23c8122a-3bf4-4675-abb2-aca349aa1923', 'title': '小米V领短袖T恤 女款', price: '129', oldPrice: '149', heat: '2',
 				reviewDesc: '比我以前买的小米充电宝砖头好太多了！放在包里不占位置...', reviewAuthor: '龚毅祥', reviewStatus: true},
-				{imgUrl: 'http://i2.mifile.cn/a1/T1eSZgBjVT1RXrhCrK.jpg?width=150&height=150', 'title': '小米移动电源10000mAh 高配版', price: '129', oldPrice: '149', heat: '2',
+				{imgUrl: 'http://i3.mifile.cn/a4/6ddc1df6-ce8e-4cb5-a26a-b5ef80f1adf7', 'title': '小米经典商务双肩包', price: '129', oldPrice: '149', heat: '2',
 				reviewDesc: '比我以前买的小米充电宝砖头好太多了！放在包里不占位置...', reviewAuthor: '龚毅祥', reviewStatus: true},
-				{imgUrl: 'http://i2.mifile.cn/a1/T1eSZgBjVT1RXrhCrK.jpg?width=150&height=150', 'title': '小米移动电源10000mAh 高配版', price: '129', oldPrice: '149', heat: '2',
+				{imgUrl: 'http://i1.mifile.cn/a1/pms_1468310472.00391359!220x220.jpg', 'title': '米家随身电蚊香', price: '129', oldPrice: '149', heat: '2',
 				reviewDesc: '比我以前买的小米充电宝砖头好太多了！放在包里不占位置...', reviewAuthor: '龚毅祥', reviewStatus: true},
-				{imgUrl: 'http://i2.mifile.cn/a1/T1eSZgBjVT1RXrhCrK.jpg?width=150&height=150', 'title': '小米移动电源10000mAh 高配版', price: '129', oldPrice: '149', heat: '2',
+				{imgUrl: 'http://i3.mifile.cn/a4/5a28d943-ef5d-4920-a89a-7f1bce6c5b35', 'title': '米家LED随身灯 增强版', price: '129', oldPrice: '149', heat: '2',
 				reviewDesc: '比我以前买的小米充电宝砖头好太多了！放在包里不占位置...', reviewAuthor: '龚毅祥', reviewStatus: true},
-				{imgUrl: 'http://i2.mifile.cn/a1/T1eSZgBjVT1RXrhCrK.jpg?width=150&height=150', 'title': '小米小钢炮', price: '79'}
+				{imgUrl: 'http://i3.mifile.cn/a4/T1yo_gBm_v1RXrhCrK.jpg', 'title': '金属鼠标垫 小号', price: '79'}
 			]
 		}
 	},

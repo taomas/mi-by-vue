@@ -3,8 +3,8 @@
 		<h3 class="top-title">{{topTitle}}</h3>
 		<ul class="top-sub">
 			<li v-for="sub in subs"
-				:class="{'active': topSubStatus === $index}"
-				@mouseenter="topSubEnter($index)">{{sub.name}}</li>
+				:class="{'active': topSubStatus === sub.key}"
+				@mouseenter="topSubEnter(sub.key)">{{sub.name}}</li>
 		</ul>
 	</div>
 </template>
