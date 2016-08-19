@@ -4,7 +4,7 @@
     <top-header></top-header>
     <top-banner></top-banner>
     <top-sub></top-sub>
-    <center-top-box></center-top-box>
+    <goods></goods>
   </div>
 </template>
 
@@ -13,7 +13,7 @@ import TopBar from './components/TopBar'
 import TopHeader from './components/TopHeader'
 import TopBanner from './components/TopBanner'
 import TopSub from './components/TopSub'
-import CenterTopBox from './components/CenterTopBox'
+import Goods from './components/Goods'
 
 export default {
   components: {
@@ -21,7 +21,7 @@ export default {
     'top-header': TopHeader,
     'top-banner': TopBanner,
     'top-sub': TopSub,
-    'center-top-box': CenterTopBox
+    'goods': Goods
   }
 }
 </script>

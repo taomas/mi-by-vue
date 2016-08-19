@@ -81,7 +81,6 @@ export default {
 	width: 40px;
 	height: 70px;
 	margin-top: -35px;
-	/*background: #ccc;*/
 	z-index: 10;
 	cursor: pointer;
 	&:hover{

@@ -80,7 +80,7 @@ export default {
 	position: relative;
 	width: 1226px;
 	height: auto;
-	margin: 14px auto 0;
+	margin: 14px auto 26px;
 }
 .sub-1 {
 	float: left;

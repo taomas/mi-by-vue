@@ -8,7 +8,7 @@
           <i class="sub-icon fa fa-fw fa-chevron-circle-right"></i>
         </span>
       </div>
-      <div class="boxs-content">
+      <div class="boxs-content clearfix">
         <div class="box-left">
           <img src="http://i3.mifile.cn/a4/57c2f4fb-6743-44c6-b447-6bd55aaeef89" alt="" />
         </div>
@@ -21,7 +21,7 @@
               <p class="box-desc">
                 {{good.desc}}
               </p>
-              <p class="price">
+              <p class="box-price">
                 {{good.price}}
               </p>
             </li>
@@ -52,12 +52,20 @@ export default {
 </script>
 
 <style scoped>
+
+.boxs-container {
+  width: 100%;
+  height: auto;
+  padding-top: 60px;
+  margin-bottom: 26px;
+  background: #f5f5f5;
+}
+
 .boxs {
   position: relative;
   width: 1226px;
   height: auto;
-  margin: 60px auto 0;
-  background: #f5f5f5;
+  margin: 0 auto;
 }
 
 .boxs-top {
@@ -100,14 +108,14 @@ export default {
   cursor: pointer;
   transition: all 0.3s;
   &:hover {
-    transform: translateY(-3px);
+    transform: translateY(-1px);
     box-shadow: 5px 5px 20px #ccc;
   }
 }
 
 .box-right {
   float: left;
-  width: 978px;
+  width: 992px;
   height: 628px;
   .box-content {
     display: flex;
@@ -118,8 +126,44 @@ export default {
     background: #f5f5f5;
   }
   .box {
-    padding: 0 0 14px 14px;
+    margin: 0 0 14px 14px;
+    padding: 20px 0;
+    width: 234px;
+    height: 260px;
     background: #fff;
+    cursor: pointer;
+    transition: all 0.3s;
+    &:hover {
+      transform: translateY(-1px);
+      box-shadow: 5px 5px 20px #ccc;
+    }
+    img {
+      display: block;
+      width: 160px;
+      height: 160px;
+      margin: 0 auto;
+    }
+    .box-title {
+      font-size: 14px;
+      text-align: center;
+      color: #333;
+      font-weight:normal;
+    }
+    .box-desc {
+      margin: 0 10px 10px;
+      height: 18px;
+      font-size: 12px;
+      text-align: center;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      color: #b0b0b0;
+    }
+    .box-price {
+      color: #ff6700;
+      font-size: 14px;
+      text-align: center;
+    }
   }
 }
 
