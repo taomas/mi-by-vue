@@ -5,6 +5,7 @@
     <top-banner></top-banner>
     <top-sub></top-sub>
     <goods></goods>
+    <temp-footer></temp-footer>
   </div>
 </template>
 
@@ -14,6 +15,7 @@ import TopHeader from './components/TopHeader'
 import TopBanner from './components/TopBanner'
 import TopSub from './components/TopSub'
 import Goods from './components/Goods'
+import TempFooter from './components/TempFooter'
 
 export default {
   components: {
@@ -21,7 +23,8 @@ export default {
     'top-header': TopHeader,
     'top-banner': TopBanner,
     'top-sub': TopSub,
-    'goods': Goods
+    'goods': Goods,
+    'temp-footer': TempFooter
   }
 }
 </script>
