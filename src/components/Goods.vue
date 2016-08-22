@@ -5,6 +5,8 @@
 		<goods-accessories></goods-accessories>
 		<goods-around></goods-around>
 		<recommend></recommend>
+		<hot-product></hot-product>
+		<goods-content></goods-content>
 	</div>
 </template>
 
@@ -14,6 +16,8 @@ import GoodsCollocation from './GoodsCollocation'
 import GoodsAccessories from './GoodsAccessories'
 import GoodsAround from './GoodsAround'
 import Recommend from './Recommend'
+import HotProduct from './HotProduct'
+import GoodsContent from './GoodsContent'
 
 export default {
 	components: {
@@ -21,7 +25,9 @@ export default {
 		'goods-collocation': GoodsCollocation,
 		'goods-accessories': GoodsAccessories,
 		'goods-around': GoodsAround,
-		'recommend': Recommend
+		'recommend': Recommend,
+		'hot-product': HotProduct,
+		'goods-content': GoodsContent
 	}
 }
 </script>

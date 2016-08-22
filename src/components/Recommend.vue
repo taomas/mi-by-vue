@@ -18,7 +18,7 @@
 			</div>
 		</div>
 		<div class="recommend-wrap">
-			<ul class="recommend-content">
+			<ul class="recommend-content clearfix">
 				<li class="recomend-item"
 					v-for="item in recomends">
 					<img class="item-image" :src="item.imageUrl" alt="" />
@@ -151,7 +151,7 @@ export default {
 		cursor: pointer;
 		transition: all 0.3s;
 		&:hover {
-			transform: translateY(-2px);
+			transform: translateY(-3px);
 		}
 		&:nth-last-child(5n+1) {
 			margin-right: 0;
