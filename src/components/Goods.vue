@@ -7,6 +7,7 @@
 		<recommend></recommend>
 		<hot-product></hot-product>
 		<goods-content></goods-content>
+		<video></video>
 	</div>
 </template>
 
@@ -18,6 +19,7 @@ import GoodsAround from './GoodsAround'
 import Recommend from './Recommend'
 import HotProduct from './HotProduct'
 import GoodsContent from './GoodsContent'
+import Video from './Video'
 
 export default {
 	components: {
@@ -27,7 +29,8 @@ export default {
 		'goods-around': GoodsAround,
 		'recommend': Recommend,
 		'hot-product': HotProduct,
-		'goods-content': GoodsContent
+		'goods-content': GoodsContent,
+		'video': Video
 	}
 }
 </script>
@@ -37,5 +40,6 @@ export default {
 	width: 100%;
 	height: auto;
 	background: #f5f5f5;
+	padding-bottom: 40px;
 }
 </style>

@@ -21,7 +21,7 @@ import GoodsRight from './common/GoodsRight'
 export default {
 	data () {
 		return {
-			topTitle: '周边',
+			topTitle: '配件',
 			subs: [
 				{name: '热门', key: 'hot'},
 				{name: '保护套', key: 'clothes'},

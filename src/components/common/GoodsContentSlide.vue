@@ -1,5 +1,6 @@
 <template>
-	<div class="content">
+	<div class="content"
+		:class="content.type">
 		<h3 class="title">{{content.title}}</h3>
 		<div class="slide-wrap">
 			<span
@@ -110,6 +111,7 @@ export default {
 	}
 }
 .book {
+	border-top: 1px solid #ffac13;
 	.title {
 		color: #ffac13;
 	}
