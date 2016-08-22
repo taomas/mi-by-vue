@@ -3,10 +3,16 @@
 		<div class="recommend-header">
 			<h2 class="title">为你推荐</h2>
 			<div class="control-part">
-				<span class="control control-left">
+				<span
+					@click="slidePre"
+					class="control control-left"
+					:class="{'disable': this.currPage === 0}">
 					<i class="fa fa-chevron-left icon-arrow"></i>
 				</span>
-				<span class="control control-right">
+				<span
+					@click="slideNext"
+					class="control control-right"
+					:class="{'disable': this.currPage === Math.floor((this.recomends.length - 1) / 5)}">
 					<i class="fa fa-chevron-right icon-arrow"></i>
 				</span>
 			</div>
@@ -33,13 +39,40 @@
 export default {
 	data () {
 		return {
+			currPage: 0,
+			evtNextStatus: true,
+			evtPreStatus: true,
 			recomends: [
-				{imageUrl: '//i1.mifile.cn/a1/T1CDbjBgAT1RXrhCrK.jpg?width=140&height=140', name: ' 90分旅行箱 24寸', price: '299元', favorable: '1.1万'},
-				{imageUrl: '//i1.mifile.cn/a1/T1CDbjBgAT1RXrhCrK.jpg?width=140&height=140', name: ' 90分旅行箱 24寸', price: '299元', favorable: '1.1万'},
-				{imageUrl: '//i1.mifile.cn/a1/T1CDbjBgAT1RXrhCrK.jpg?width=140&height=140', name: ' 90分旅行箱 24寸', price: '299元', favorable: '1.1万'},
-				{imageUrl: '//i1.mifile.cn/a1/T1CDbjBgAT1RXrhCrK.jpg?width=140&height=140', name: ' 90分旅行箱 24寸', price: '299元', favorable: '1.1万'},
-				{imageUrl: '//i1.mifile.cn/a1/T1CDbjBgAT1RXrhCrK.jpg?width=140&height=140', name: ' 90分旅行箱 24寸', price: '299元', favorable: '1.1万'}
+				{imageUrl: '//i1.mifile.cn/a1/T18EWQBjWT1RXrhCrK.jpg?width=140&height=140', name: '智能显示保护套1', price: '59元', favorable: '4114'},
+				{imageUrl: '//i1.mifile.cn/a1/pms_1469523170.25518983.jpg?width=140&height=140', name: 'USB-C至HDMI多功能转接器1', price: '149元', favorable: '82'},
+				{imageUrl: '//i1.mifile.cn/a1/T1jsDgBXdv1RXrhCrK.jpg?width=140&height=140', name: '智能翻盖保护套1', price: '49元', favorable: '1.5万'},
+				{imageUrl: '//i1.mifile.cn/a1/T1_tEgBmVv1RXrhCrK.jpg?width=140&height=140', name: '米兔儿童电话手表1', price: '299元', favorable: '7743'},
+				{imageUrl: '//i1.mifile.cn/a1/T1CDbjBgAT1RXrhCrK.jpg?width=140&height=140', name: '90分旅行箱 24寸1', price: '349元', favorable: '1.1万'},
+				{imageUrl: '//i1.mifile.cn/a1/T18EWQBjWT1RXrhCrK.jpg?width=140&height=140', name: '智能显示保护套2', price: '59元', favorable: '4114'},
+				{imageUrl: '//i1.mifile.cn/a1/pms_1469523170.25518983.jpg?width=140&height=140', name: 'USB-C至HDMI多功能转接器2', price: '149元', favorable: '82'},
+				{imageUrl: '//i1.mifile.cn/a1/T1jsDgBXdv1RXrhCrK.jpg?width=140&height=140', name: '智能翻盖保护套2', price: '49元', favorable: '1.5万'},
+				{imageUrl: '//i1.mifile.cn/a1/T1_tEgBmVv1RXrhCrK.jpg?width=140&height=140', name: '米兔儿童电话手表2', price: '299元', favorable: '7743'},
+				{imageUrl: '//i1.mifile.cn/a1/T1CDbjBgAT1RXrhCrK.jpg?width=140&height=140', name: '90分旅行箱 24寸2', price: '349元', favorable: '1.1万'},
+				{imageUrl: '//i1.mifile.cn/a1/T18EWQBjWT1RXrhCrK.jpg?width=140&height=140', name: '智能显示保护套3', price: '59元', favorable: '4114'},
+				{imageUrl: '//i1.mifile.cn/a1/pms_1469523170.25518983.jpg?width=140&height=140', name: 'USB-C至HDMI多功能转接器3', price: '149元', favorable: '82'},
+				{imageUrl: '//i1.mifile.cn/a1/T1jsDgBXdv1RXrhCrK.jpg?width=140&height=140', name: '智能翻盖保护套3', price: '49元', favorable: '1.5万'},
+				{imageUrl: '//i1.mifile.cn/a1/T1_tEgBmVv1RXrhCrK.jpg?width=140&height=140', name: '米兔儿童电话手表3', price: '299元', favorable: '7743'},
+				{imageUrl: '//i1.mifile.cn/a1/T1CDbjBgAT1RXrhCrK.jpg?width=140&height=140', name: '90分旅行箱 24寸3', price: '349元', favorable: '1.1万'}
 			]
+		}
+	},
+	methods: {
+		slideNext () {
+			if (this.currPage < Math.floor((this.recomends.length - 1) / 5)) {
+				this.currPage++
+				$('.recommend-content').css('margin-left', this.currPage * (-1224) + 'px')
+			}
+		},
+		slidePre () {
+			if (this.currPage !== 0) {
+				this.currPage--
+				$('.recommend-content').css('margin-left', this.currPage * (-1224) + 'px')
+			}
 		}
 	}
 }
@@ -81,6 +114,16 @@ export default {
 					color: #ff6700;
 				}
 			}
+			&.disable {
+				&:hover {
+					.icon-arrow {
+						color: #e0e0e0;
+					}
+				}
+				.icon-arrow {
+					color: #e0e0e0;
+				}
+			}
 			.icon-arrow {
 				color: #b0b0b0;
 				font-size: 10px;
@@ -88,22 +131,29 @@ export default {
 		}
 	}
 }
+.recommend-wrap {
+	width: 1226px;
+	height: 310px;
+	overflow: hidden;
+}
 .recommend-content {
-	display: flex;
-	flex-flow: row nowrap;
-	justify-content: flex-start;
+	width: auto;
+	height: 300px;
+	transition: all 0.3s;
 	.recomend-item {
+		float: left;
+		display: block;
 		width: 234px;
 		height: 300px;
-		margin: 0 14px 14px 0;
+		margin: 0 13px 14px 0;
 		font-size: 14px;
 		background: #fff;
 		cursor: pointer;
 		transition: all 0.3s;
 		&:hover {
-			transform: translateY(-1px);
+			transform: translateY(-2px);
 		}
-		&:nth-last-child(1) {
+		&:nth-last-child(5n+1) {
 			margin-right: 0;
 		}
 		.item-image {
