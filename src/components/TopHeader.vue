@@ -14,7 +14,9 @@
 				</ul>
 			</div>
 			<div class="header-search">
-				<ul class="hot-word" v-show="hotStatus">
+				<ul class="hot-word"
+					transition="fadeOut"
+					v-show="hotStatus">
 					<li class="hot-item"
 						v-for="item in hotItems">
 						{{item}}
@@ -54,7 +56,6 @@
 </template>
 
 <script>
-// import headerMenu from './common/Header-Menu.vue'
 export default {
 	data () {
 		return {
@@ -272,6 +273,13 @@ export default {
 				background: #ff6300;
 			}
 		}
+	}
+	.fadeOut-transition {
+		transition: all .3s ease;
+		opacity: 1;
+	}
+	.fadeOut-enter, .fadeOut-leave {
+	  opacity: 0;
 	}
 	.search-ipt {
 		float: left;
