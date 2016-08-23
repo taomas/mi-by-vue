@@ -25,3 +25,8 @@ ul {
 .clearfix {
   *+height: 1%;
 }
+
+a {
+  text-decoration: none;
+  color: #333;
+}
