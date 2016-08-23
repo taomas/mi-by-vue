@@ -15,7 +15,7 @@
 			transition="fadeIn"
 			v-show="$index === curpage"
 			v-for="item in banners">
-			<img :src="item.sourcePath" alt="" />
+			<img :src="item.imgUrl" alt="" />
 		</div>
 	</div>
 </template>
@@ -96,7 +96,6 @@ export default {
 	width: 40px;
 	height: 70px;
 	margin-top: -35px;
-	/*background: #fff;*/
 	z-index: 10;
 	cursor: pointer;
 	&:hover{
@@ -140,13 +139,4 @@ export default {
   opacity: 0;
 }
 
-/*.icon-chevron-left {
-	background: url('../../assets/img/chevron-left.png');
-	background-size: 100% 100%;
-}
-
-.icon-chevron-right {
-	background: url('../../assets/img/chevron-right.png');
-	background-size: 100% 100%;
-}*/
 </style>

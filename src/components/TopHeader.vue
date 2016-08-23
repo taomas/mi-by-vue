@@ -6,10 +6,15 @@
 			<div class="header-navs">
 				<ul class="navs">
 					<li v-for="item in navs" class="nav">
-						<a href="#" class="nav-item"
-						@mouseenter="evtHeaderEnter(item.type)"
-						@mouseleave="evtHeaderLeave()"
-						>{{item.name}}</a>
+						<template v-if="item.type">
+							<a href="javascript: void(0);" class="nav-item"
+							@mouseenter="evtHeaderEnter(item.type)"
+							@mouseleave="evtHeaderLeave()"
+							>{{item.name}}</a>
+						</template>
+						<template v-else>
+							<a href="javascript: void(0);" class="nav-item">{{item.name}}</a>
+						</template>
 					</li>
 				</ul>
 			</div>
@@ -154,7 +159,6 @@ export default {
 		},
 		evtHeaderEnter (menuType) {
 			const $menu = $('.header-menu')
-			console.log(menuType)
 			if (menuType) {
 				this.currentPhones = this[menuType]
 			}
