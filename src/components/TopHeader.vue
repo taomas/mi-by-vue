@@ -14,6 +14,12 @@
 				</ul>
 			</div>
 			<div class="header-search">
+				<ul class="hot-word" v-show="hotStatus">
+					<li class="hot-item"
+						v-for="item in hotItems">
+						{{item}}
+					</li>
+				</ul>
 				<input
 					@focus="evtIptFocus"
 					@blur="evtIptBlur"
@@ -52,9 +58,11 @@
 export default {
 	data () {
 		return {
+			hotStatus: true,
 			headerStatus: false,
 			tids: [],
 			currentPhones: this.xiaomi,
+			hotItems: ['红米pro', '小米笔记本air'],
 			xiaomi: [
 				{name: '小米Max', imgUrl: 'http://c1.mifile.cn/f/i/15/goods/nav/maxdingbu!160x110.jpg', sourcePath: 'http://www.mi.com/mimax/', price: '1299元起'},
 				{name: '小米手机5', imgUrl: 'http://c1.mifile.cn/f/i/16/goods/nav/mi5!160x110.jpg', sourcePath: 'http://www.mi.com/mimax/', price: '1499元起'},
@@ -136,10 +144,12 @@ export default {
 		evtIptFocus () {
 			$('.header-search').addClass('search-active')
 			$('.search-result').show()
+			this.hotStatus = false
 		},
 		evtIptBlur () {
 			$('.header-search').removeClass('search-active')
 			$('.search-result').hide()
+			this.hotStatus = true
 		},
 		evtHeaderEnter (menuType) {
 			const $menu = $('.header-menu')
@@ -240,6 +250,29 @@ export default {
 	width: 295px;
 	height: 50px;
 	border: 1px solid #e0e0e0;
+	.hot-word {
+		position: absolute;
+		top: 14px;
+    right: 62px;
+    z-index: 2;
+    text-align: right;
+		.hot-item {
+			float: left;
+			width: auto;
+			height: 18px;
+			line-height: 18px;
+			padding: 0 5px;
+			font-size: 12px;
+			background: #eee;
+    	color: #757575;
+			margin-right: 5px;
+			cursor: pointer;
+			&:hover {
+				color: #fff;
+				background: #ff6300;
+			}
+		}
+	}
 	.search-ipt {
 		float: left;
 		width: 240px;

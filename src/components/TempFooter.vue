@@ -168,14 +168,6 @@
 export default {
 	data () {
 		return {
-			footerItems: [
-				{items: ['帮助中心', '账户管理', '购物指南', '订单操作']},
-				{items: ['服务支持', '售后政策', '自助服务', '相关下载']},
-				{items: ['线下门店', '小米之家', '服务网点', '零售网点']},
-				{items: ['关于小米', '了解小米', '加入小米', '联系我们']},
-				{items: ['关于小米', '了解小米', '加入小米', '联系我们']},
-				{items: ['关于小米', '了解小米', '加入小米', '联系我们']}
-			]
 		}
 	}
 }
@@ -186,7 +178,7 @@ export default {
 	width: 1226px;
 	height: auto;
 	margin: 0 auto;
-	padding-bottom: 50px;
+	padding-bottom: 20px;
 }
 
 .footer-service {

@@ -132,34 +132,33 @@ export default {
 			height: 340px;
 		}
 	}
-}
-
-.slide-pre, .slide-next {
-	display: block;
-	width: 20px;
-	height: 46px;
-	line-height: 46px;
-	font-size: 15px;
-	text-align: center;
-	margin-top: -24px;
-	cursor: pointer;
-	z-index: 11;
-	background: #b0b0b0;
-	color: #fff;
-}
-.slide-pre {
-	position: absolute;
-	left: 0;
-	top: 50%;
-	opacity: 0;
-	transition: all 0.3s;
-}
-.slide-next {
-	position: absolute;
-	right: 0;
-	top: 50%;
-	opacity: 0;
-	transition: all 0.3s;
+	.slide-pre, .slide-next {
+		display: block;
+		width: 20px;
+		height: 46px;
+		line-height: 46px;
+		font-size: 15px;
+		text-align: center;
+		margin-top: -24px;
+		cursor: pointer;
+		z-index: 11;
+		background: #b0b0b0;
+		color: #fff;
+	}
+	.slide-pre {
+		position: absolute;
+		left: 0;
+		top: 50%;
+		opacity: 0;
+		transition: all 0.3s;
+	}
+	.slide-next {
+		position: absolute;
+		right: 0;
+		top: 50%;
+		opacity: 0;
+		transition: all 0.3s;
+	}
 }
 
 .subTitle {
