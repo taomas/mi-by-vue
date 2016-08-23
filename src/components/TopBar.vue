@@ -55,7 +55,6 @@ export default {
 		}
 	},
   ready () {
-    console.log($(window).width())
   },
 	methods: {
 		evtCartEnter: function () {

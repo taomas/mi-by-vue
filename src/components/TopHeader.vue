@@ -4,7 +4,7 @@
 			<a href="#" class="icon-mi"></a>
 			<a href="#" class="pic-gif"></a>
 			<div class="header-navs">
-				<ul class="navs"">
+				<ul class="navs">
 					<li v-for="item in navs" class="nav">
 						<a href="#" class="nav-item"
 						@mouseenter="evtHeaderEnter(item.type)"

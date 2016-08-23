@@ -2,7 +2,7 @@
 
 > 利用vue.js模仿小米官网的作品
 
-## Build Setup
+## 运行步骤
 
 ``` bash
 # 安装依赖
@@ -15,3 +15,7 @@ npm run dev
 npm run build
 
 ```
+
+## 访问路径
+
+[http://vue.wendaosanshou.top/mi/](http://vue.wendaosanshou.top/mi/)
