@@ -45,6 +45,13 @@
 					</template>
 				</li>
 			</ul>
+			<ul class="dot-list">
+				<li class="dot-item"
+					v-for="item in 4"
+					:class="{'active': this.currPage === $index}">
+					<span class="dot"></span>
+				</li>
+			</ul>
 		</div>
 	</div>
 </template>
@@ -199,6 +206,43 @@ export default {
 	&:hover {
 		color: #fff;
 		background: #ffac13;
+	}
+}
+
+.dot-list {
+	display: block;
+	position: absolute;
+	left: 50%;
+	bottom: 10px;
+	width: 140px;
+	margin-left: -70px;
+	z-index: 11;
+	.dot-item {
+		display: inline-block;
+    width: 10px;
+    height: 10px;
+    padding: 10px;
+    margin: 0 2px;
+    cursor: pointer;
+		&.active {
+			.dot {
+				background: #fff;
+				border: 2px solid #ff6700;
+			}
+		}
+		.dot {
+			display: block;
+	    width: 6px;
+	    height: 6px;
+	    border: 2px solid #f5f5f5;
+	    border-radius: 6px;
+	    text-align: left;
+	    text-indent: -9999em;
+	    overflow: hidden;
+	    background-color: #b0b0b0;
+	    -webkit-transition: all .5s;
+	    transition: all .5s;
+		}
 	}
 }
 </style>

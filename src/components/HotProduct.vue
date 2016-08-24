@@ -61,6 +61,10 @@ export default {
 	}
 }
 
+.hot-wrap {
+	position: relative;
+}
+
 .hot-content {
 	.hot-item {
 		float: left;
@@ -114,4 +118,5 @@ export default {
 		color: #ff6700;
 	}
 }
+
 </style>
