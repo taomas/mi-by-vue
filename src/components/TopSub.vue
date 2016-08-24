@@ -3,20 +3,32 @@
 		<div class="sub-1">
 			<ul class="channels">
 				<li class="channel">
-					<i class="fa fa-mobile fa-fw sub-icon"></i>
-					<a href="#">选购手机</a>
+          <a href="http://www.mi.com/compare/" target="_blank">
+  					<i class="fa fa-mobile fa-fw sub-icon"></i>
+            <p class="channel-txt">
+  					      选购手机
+            </p>
+          </a>
 				</li>
 				<div class="line-vertical">
 				</div>
 				<li class="channel">
-					<i class="fa fa-gift fa-fw sub-icon"></i>
-					<a href="#">企业团购</a>
+          <a href="http://qiye.mi.com/" target="_blank">
+  					<i class="fa fa-gift fa-fw sub-icon"></i>
+            <p class="channel-txt">
+  					       企业团购
+            </p>
+          </a>
 				</li>
 				<div class="line-vertical">
 				</div>
 				<li class="channel">
-					<i class="fa fa-refresh fa-fw sub-icon"></i>
-					<a href="#">官翻产品</a>
+          <a href="http://item.mi.com/re" target="_blank">
+  					<i class="fa fa-refresh fa-fw sub-icon"></i>
+            <p class="channel-txt">
+  					       官翻产品
+            </p>
+          </a>
 				</li>
 				<div class="line-horizontal">
 				</div>
@@ -25,37 +37,47 @@
 				<div class="line-horizontal">
 				</div>
 				<li class="channel">
-					<i class="fa fa-credit-card fa-fw sub-icon"></i>
-					<a href="#">小米移动</a>
+          <a href="http://huanxin.mi.com/product/list" target="_blank">
+  					<i class="fa fa-credit-card fa-fw sub-icon"></i>
+            <p class="channel-txt">小米移动</p>
+          </a>
 				</li>
 				<div class="line-vertical">
 				</div>
 				<li class="channel">
-					<i class="fa fa-recycle fa-fw sub-icon"></i>
-					<a href="#">以旧换新</a>
+          <a href="http://huanxin.mi.com/product/list" target="_blank">
+  					<i class="fa fa-recycle fa-fw sub-icon"></i>
+  					<p class="channel-txt">
+  					  以旧换新
+  					</p>
+          </a>
 				</li>
 				<div class="line-vertical">
 				</div>
 				<li class="channel">
-					<i class="fa fa-credit-card-alt fa-fw sub-icon"></i>
-					<a href="#">话费充值</a>
+          <a href="http://recharge.10046.mi.com/" target="_blank">
+  					<i class="fa fa-credit-card-alt fa-fw sub-icon"></i>
+            <p class="channel-txt">
+    					话费充值
+            </p>
+          </a>
 				</li>
 			</ul>
 		</div>
 		<ul class="subs">
 			<li>
-				<a href="#" class="sub-item sub-2">
-					<img src="http://i3.mifile.cn/a4/69f0776a-262b-4d88-853e-212a19e9f323" alt="" />
+				<a href="http://hd.mi.com/y/08191p/index.html" class="sub-item sub-2" target="_blank">
+					<img src="http://i3.mifile.cn/a4/1327d707-4f67-4c36-8ae5-3d7704c989eb" alt="" />
 				</a>
 			</li>
 			<li>
-				<a href="#" class="sub-item sub-3">
-					<img src="http://i3.mifile.cn/a4/d7136426-ce57-432a-aa12-8224546e0530" alt="" />
+				<a href="http://item.mi.com/buyphone/redmipro/" class="sub-item sub-3" target="_blank">
+					<img src="http://i3.mifile.cn/a4/c202123c-4197-4666-9793-2f1e156ab23a" alt="" />
 				</a>
 			</li>
 			<li>
-				<a href="#" class="sub-item sub-4">
-					<img src="http://i3.mifile.cn/a4/615c4599-fd37-4e61-aef6-c30b73330237" alt="" />
+				<a href="http://item.mi.com/static/buymipad" class="sub-item sub-4" target="_blank">
+					<img src="http://i3.mifile.cn/a4/216f7f38-66ee-4c1b-8409-8d77cb64d386" alt="" />
 				</a>
 			</li>
 		</ul>
@@ -101,15 +123,16 @@ export default {
 		height: 82px;
 		cursor: pointer;
 		&:hover{
-			a {
+			.channel-txt {
 				color: #fff;
 			}
 			.sub-icon {
 				color: #fff;
 			}
 		}
-		a {
+		.channel-txt {
 			display: block;
+      margin: 0;
 			width: 75px;
 			font-size: 12px;
 			text-align: center;
