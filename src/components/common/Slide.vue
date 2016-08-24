@@ -15,7 +15,9 @@
 			transition="fadeIn"
 			v-show="$index === curpage"
 			v-for="item in banners">
-			<img :src="item.imgUrl" alt="" />
+			<a :href="item.sourceUrl" target="_blank">
+				<img :src="item.imgUrl" alt="" />
+			</a>
 		</div>
 	</div>
 </template>
