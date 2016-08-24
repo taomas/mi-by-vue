@@ -2,10 +2,12 @@
 	<div class="video-container">
 		<div class="header clearfix">
 			<h2 class="title">{{title}}</h2>
-			<span class="top-sub">
-				查看全部
-				<i class="sub-icon fa fa-fw fa-chevron-circle-right"></i>
-			</span>
+			<a href="//www.mi.com/video/" target="_blank">
+				<span class="top-sub">
+					查看全部
+					<i class="sub-icon fa fa-fw fa-chevron-circle-right"></i>
+				</span>
+			</a>
 		</div>
 		<div class="video-content">
 			<ul class="video-wrap clearfix">

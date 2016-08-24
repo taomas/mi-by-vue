@@ -18,29 +18,35 @@
 				<li class="content-item"
 					v-for="item in content.list">
 					<template v-if="item.type === 0">
-						<h3 class="subTitle">{{item.title}}</h3>
-						<p class="desc">
-							{{item.desc}}
-						</p>
-						<img class="content-image" :src="item.imgUrl" alt="" />
+						<a :href="item.sourceUrl" target="_blank">
+							<h3 class="subTitle">{{item.title}}</h3>
+							<p class="desc first-desc">
+								{{item.desc}}
+							</p>
+							<img class="content-image" :src="item.imgUrl" alt="" />
+						</a>
 					</template>
 					<template v-if="item.type === 1">
-						<h3 class="subTitle">{{item.title}}</h3>
-						<p class="desc">
-							{{item.desc}}
-						</p>
-						<p class="price">
-							{{item.price}}
-						</p>
-						<img class="content-image" :src="item.imgUrl" alt="" />
+						<a :href="item.sourceUrl" target="_blank">
+							<h3 class="subTitle">{{item.title}}</h3>
+							<p class="desc">
+								{{item.desc}}
+							</p>
+							<p class="price">
+								{{item.price}}
+							</p>
+							<img class="content-image" :src="item.imgUrl" alt="" />
+						</a>
 					</template>
 					<template v-if="item.type === 2">
 						<p class="desc">
 							{{item.desc1}}<br/>{{item.desc2}}
 						</p>
-						<p class="btn-txt">
-							{{item.btnTxt}}
-						</p>
+						<a :href="item.sourceUrl" target="_blank">
+							<p class="btn-txt">
+								{{item.btnTxt}}
+							</p>
+						</a>
 						<img class="content-image" :src="item.imgUrl" alt="" />
 					</template>
 				</li>
@@ -122,8 +128,67 @@ export default {
 	.title {
 		color: #ffac13;
 	}
+	.btn-txt {
+		color: #ffac13;
+		border: 1px solid #ffac13;
+		background: #fff;
+		&:hover {
+			color: #fff;
+			background: #ffac13;
+		}
+	}
+	.first-desc {
+		margin-bottom: 60px; 
+	}
 }
 
+.theme {
+	border-top: 1px solid #83c44e;
+	.title {
+		color: #83c44e;
+	}
+	.btn-txt {
+		color: #83c44e;
+		border: 1px solid #83c44e;
+		background: #fff;
+		&:hover {
+			color: #fff;
+			background: #83c44e;
+		}
+	}
+}
+
+.game {
+	border-top: 1px solid #e53935;
+	.title {
+		color: #e53935;
+	}
+	.btn-txt {
+		color: #e53935;
+		border: 1px solid #e53935;
+		background: #fff;
+		&:hover {
+			color: #fff;
+			background: #e53935;
+		}
+	}
+}
+
+.app {
+	border-top: 1px solid #2196f3;
+	.title {
+		color: #2196f3;
+	}
+	.btn-txt {
+		color: #2196f3;
+		border: 1px solid #2196f3;
+		background: #fff;
+		&:hover {
+			color: #fff;
+			background: #2196f3;
+		}
+	}
+}
 .slide-wrap {
 	width: 296px;
 	height: 340px;
@@ -169,6 +234,7 @@ export default {
 }
 
 .subTitle {
+	margin: 0 0 10px 0;
 	font-weight: normal;
 	font-size: 20px;
 	text-align: center;
@@ -179,6 +245,8 @@ export default {
 	line-height: 1.5;
 	text-align: center;
 	color: #b0b0b0;
+	width: 200px;
+	margin: 0 auto 10px;
 }
 .content-image {
 	display: block;
@@ -199,14 +267,8 @@ export default {
 	text-align: center;
 	margin: 0 auto;
 	margin-bottom: 14px;
-	border: 1px solid #ffac13;
-	color: #ffac13;
 	background: #fff;
 	cursor: pointer;
-	&:hover {
-		color: #fff;
-		background: #ffac13;
-	}
 }
 
 .dot-list {
@@ -240,7 +302,6 @@ export default {
 	    text-indent: -9999em;
 	    overflow: hidden;
 	    background-color: #b0b0b0;
-	    -webkit-transition: all .5s;
 	    transition: all .5s;
 		}
 	}
