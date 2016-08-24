@@ -6,6 +6,7 @@
     <top-sub></top-sub>
     <goods></goods>
     <temp-footer></temp-footer>
+    <play-video></play-video>
   </div>
 </template>
 
@@ -16,15 +17,25 @@ import TopBanner from './components/TopBanner'
 import TopSub from './components/TopSub'
 import Goods from './components/Goods'
 import TempFooter from './components/TempFooter'
+import PlayVideo from './components/common/PlayVideo'
 
 export default {
+  data () {
+    return {
+      playStatus: false
+    }
+  },
+  methods: {
+    
+  },
   components: {
     'top-bar': TopBar,
     'top-header': TopHeader,
     'top-banner': TopBanner,
     'top-sub': TopSub,
     'goods': Goods,
-    'temp-footer': TempFooter
+    'temp-footer': TempFooter,
+    'play-video': PlayVideo
   }
 }
 </script>

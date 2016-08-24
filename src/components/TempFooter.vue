@@ -262,6 +262,7 @@ export default {
 				margin: 0 auto;
 				border: 1px solid #ff6700;
 				color: #ff6700;
+				cursor: pointer;
 				&:hover {
 					background: #ff6700;
 					color: #fff;
