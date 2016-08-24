@@ -5,16 +5,18 @@
 			<ul class="hot-content clearfix">
 				<li class="hot-item"
 					v-for="item in hots">
-					<img class="item-image" :src="item.imageUrl" alt="" />
-					<div class="item-evaluation">
-						<p class="review-txt">{{item.review}}</p>
-						<p class="author">来自{{item.author}}的评价</p>
-					</div>
-					<div class="item-desc">
-						<span class="item-name">{{item.name}}</span>
-						<span class="sep">|</span>
-						<span class="item-price">{{item.price}}</span>
-					</div>
+					<a :href="item.sourceUrl" target="_blank">
+						<img class="item-image" :src="item.imageUrl" alt="" />
+						<div class="item-evaluation">
+							<p class="review-txt">{{item.review}}</p>
+							<p class="author">来自{{item.author}}的评价</p>
+						</div>
+						<div class="item-desc">
+							<span class="item-name">{{item.name}}</span>
+							<span class="sep">|</span>
+							<span class="item-price">{{item.price}}元</span>
+						</div>
+					</a>
 				</li>
 			</ul>
 		</div>
@@ -28,10 +30,10 @@ export default {
 		return {
 			title: '热评产品',
 			hots: [
-				{imageUrl: 'http://i3.mifile.cn/a4/bae79ac6-60d5-478d-90e7-ff1222764bd1', review: '东西很小，做工挺精致，电池待机也比想象中好。值得买。', author: '同路者', name: '小米随身蓝牙音箱', price: '299元', favorable: '1.1万'},
-				{imageUrl: 'http://i3.mifile.cn/a4/62d44838-f464-4c11-887c-9168645ae797', review: '东西很小，做工挺精致，电池待机也比想象中好。值得买。', author: '同路者', name: '小米随身蓝牙音箱', price: '299元', favorable: '1.1万'},
-				{imageUrl: 'http://i3.mifile.cn/a4/1e737b55-91bd-4f5b-b085-405fa722142f', review: '东西很小，做工挺精致，电池待机也比想象中好。值得买。', author: '同路者', name: '小米随身蓝牙音箱', price: '299元', favorable: '1.1万'},
-				{imageUrl: 'http://i3.mifile.cn/a4/a14bd55a-2a7f-4e5f-9d8d-79e3e1bdb467', review: '东西很小，做工挺精致，电池待机也比想象中好。值得买。', author: '同路者', name: '小米随身蓝牙音箱', price: '299元', favorable: '1.1万'}
+				{sourceUrl: '//www.mi.com/mituwatch/', imageUrl: 'http://i3.mifile.cn/a4/1e737b55-91bd-4f5b-b085-405fa722142f', review: '很好，孩子很喜欢，产品不错', author: 'showen', name: '米兔儿童电话手表', price: '299'},
+				{sourceUrl: '//www.mi.com/mitu/', imageUrl: 'http://i3.mifile.cn/a4/032d0ff1-f77f-4830-a469-f3564d55e0c5', review: '米兔真心不错！！内容丰富，声音柔和，孩子看见后，就抱着不撒手啦，超级喜欢！！！', author: 'Jack伯爵', name: '米兔智能故事机', price: '199'},
+				{sourceUrl: '//www.mi.com/note3/pro/', imageUrl: 'http://i3.mifile.cn/a4/a14bd55a-2a7f-4e5f-9d8d-79e3e1bdb467', review: '手机很不错 外观大气金属质感 一直都用的红米手机 很不错 很漂亮也很好用', author: '1108656217', name: '红米Note 3全网通版', price: '899'},
+				{sourceUrl: '//www.mi.com/miwifi3/', imageUrl: 'http://i3.mifile.cn/a4/8949026b-fa9a-4370-989b-5d5e2f149106', review: '我就是喜欢这样的路由器，我每天回到家都要连着WiFi上网，上班就没办法连着呢！每次都等待着下班，我好...', author: '欧阳长', name: '小米路由器3', price: '149'}
 			]
 		}
 	},
