@@ -11,7 +11,9 @@
 					</a>
 					<p class="goods-price">
 						{{goods.price}}元
-						<span class="old-price">
+						<span
+							v-if="goods.discount"
+							class="old-price">
 							{{goods.oldPrice}}元
 						</span>
 					</p>
