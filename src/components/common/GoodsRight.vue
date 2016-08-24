@@ -2,11 +2,13 @@
 	<div class="goods-right">
 		<ul class="goods-right-content">
 			<template
-				v-for="goods in hotGoods"
-				v-if="$index < hotGoods.length - 1">
+				v-for="goods in currGoods"
+				v-if="$index < currGoods.length - 1">
 				<li class="goods-right-item">
-					<img :src="goods.imgUrl" alt="" />
-					<h3 class="goods-title">{{goods.title}}</h3>
+					<a :href="goods.sourceUrl" target="_blank">
+						<img :src="goods.imgUrl" alt="" />
+						<h3 class="goods-title">{{goods.title}}</h3>
+					</a>
 					<p class="goods-price">
 						{{goods.price}}元
 						<span class="old-price">
@@ -26,17 +28,19 @@
 			</template>
 			<ul class="goods-right-small">
 				<li class="item-small">
-					<div class="desc">
-						<h3 class="title">
-							{{hotGoods[hotGoods.length - 1].title}}
-						</h3>
-						<span class="price">
-							{{hotGoods[hotGoods.length - 1].price}}元
-						</span>
-					</div>
-					<img
-						class="small-img"
-						:src="hotGoods[hotGoods.length - 1].imgUrl" alt="" />
+					<template v-if="currGoods && currGoods.length !== 0">
+						<div class="desc">
+							<h3 class="title">
+								{{currGoods[currGoods.length - 1].title}}
+							</h3>
+							<span class="price">
+								{{currGoods[currGoods.length - 1].price}}元
+							</span>
+						</div>
+						<img
+							class="small-img"
+							:src="currGoods[currGoods.length - 1].imgUrl" alt="" />
+					</template>
 				</li>
 				<li class="item-small read-more">
 					<div class="desc">
@@ -57,7 +61,7 @@
 <script>
 export default {
 	props: {
-		hotGoods: {
+		currGoods: {
 			require: true,
 			type: Array
 		}
