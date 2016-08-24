@@ -29,32 +29,35 @@
 				</li>
 			</template>
 			<ul class="goods-right-small">
-				<li class="item-small">
-					<template v-if="currGoods && currGoods.length !== 0">
-						<div class="desc">
-							<h3 class="title">
-								{{currGoods[currGoods.length - 1].title}}
-							</h3>
-							<span class="price">
-								{{currGoods[currGoods.length - 1].price}}元
-							</span>
-						</div>
-						<img
-							class="small-img"
-							:src="currGoods[currGoods.length - 1].imgUrl" alt="" />
-					</template>
-				</li>
-				<li class="item-small read-more">
-					<div class="desc">
-						<h3 class="title">
-							浏览更多
-						</h3>
-						<span class="price hot">
-							热门
-						</span>
-					</div>
-					<i class="fa fa-arrow-circle-right fa-4x icon-arrow"></i>
-				</li>
+				<template v-if="lastGoods">
+					<li class="item-small">
+						<a :href="lastGoods.sourceUrl" target="_blank">
+							<div class="desc">
+								<h3 class="title">
+									{{lastGoods.title}}
+								</h3>
+								<span class="price">
+									{{lastGoods.price}}元
+								</span>
+							</div>
+							<img class="small-img"
+								:src="lastGoods.imgUrl" alt="" />
+							</a>
+					</li>
+					<li class="item-small read-more">
+						<a :href="lastGoods.moreUrl" target="_blank">
+							<div class="desc">
+								<h3 class="title">
+									浏览更多
+								</h3>
+								<span class="price hot">
+									热门
+								</span>
+							</div>
+							<i class="fa fa-arrow-circle-right fa-4x icon-arrow"></i>
+						</a>
+					</li>
+			</template>
 			</ul>
 		</ul>
 	</div>
@@ -66,6 +69,15 @@ export default {
 		currGoods: {
 			require: true,
 			type: Array
+		}
+	},
+	computed: {
+		lastGoods: function () {
+			if (this.currGoods && this.currGoods.length > 0) {
+				return this.currGoods[this.currGoods.length - 1]
+			} else {
+				return null
+			}
 		}
 	}
 }
@@ -155,8 +167,9 @@ export default {
 		}
 		.desc {
 			float: left;
-			width: 120px;
+			width: 80px;
 			height: 100%;
+			margin-right: 20px;
 			.title {
 				font-size: 14px;
 				text-align: center;

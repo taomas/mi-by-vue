@@ -37,8 +37,8 @@ export default {
 				{name: '箱包', key: 'bags'}
 			],
 			leftGoods: [
-				{imgUrl: 'http://i3.mifile.cn/a4/ff2a2f99-2c69-4472-acc1-e16322ee79ba'},
-				{imgUrl: 'http://i3.mifile.cn/a4/c2b64ac9-0b29-4158-a4ab-66aca1720916'}
+				{sourceUrl: '//list.mi.com/22', imgUrl: 'http://i3.mifile.cn/a4/ff2a2f99-2c69-4472-acc1-e16322ee79ba'},
+				{sourceUrl: '//list.mi.com/23', imgUrl: 'http://i3.mifile.cn/a4/c2b64ac9-0b29-4158-a4ab-66aca1720916'}
 			],
 			hot: [
 				{sourceUrl: '//item.mi.com/1151400027.html', imgUrl: 'http://i3.mifile.cn/a4/T1IDC_B_Kv1RXrhCrK.jpg', title: '小米V领短袖T恤 男款', price: '29', oldPrice: '39', heat: '1.6万',
@@ -55,7 +55,7 @@ export default {
 				reviewDesc: '这个真不错！我用超威蚊香片插放很容易！它使用的标准尺...', reviewAuthor: 'LGH863117', reviewStatus: true, discount: false},
 				{sourceUrl: '//item.mi.com/1162800009.html', imgUrl: 'http://i3.mifile.cn/a4/5a28d943-ef5d-4920-a89a-7f1bce6c5b35', title: '米家LED随身灯 增强版', price: '19.9', oldPrice: '39', heat: '2261',
 				reviewDesc: '很好用！特别是五挡开关灯，好用！方便！', reviewAuthor: '86505510', reviewStatus: true, discount: false},
-				{sourceUrl: '//item.mi.com/1144600004.html', imgUrl: 'http://i3.mifile.cn/a4/T1yo_gBm_v1RXrhCrK.jpg', title: '金属鼠标垫 小号', price: '49'}
+				{moreUrl: '//list.mi.com/zhoubian', sourceUrl: '//item.mi.com/1144600004.html', imgUrl: 'http://i3.mifile.cn/a4/T1yo_gBm_v1RXrhCrK.jpg', title: '金属鼠标垫 小号', price: '49'}
 			],
 			clothes: [
 				{sourceUrl: '//item.mi.com/1161000022.html', imgUrl: '//i3.mifile.cn/a4/T1i.YjBbWT1RXrhCrK.jpg', title: '小米短袖T恤 情侣米兔 女款', price: '29', oldPrice: '39', heat: '1558',
@@ -72,7 +72,7 @@ export default {
 				reviewDesc: '便宜好货，胜过nike，做工精细，新国货 ，小米加油！', reviewAuthor: '蓝海苑', reviewStatus: true, discount: false},
 				{sourceUrl: '//item.mi.com/1161000035.html', imgUrl: '//i3.mifile.cn/a4/T1m3CgBXJv1RXrhCrK.jpg', title: '小米短袖T恤 摇滚星球', price: '29', oldPrice: '39', heat: '2622',
 				reviewDesc: '纯棉的穿的很舒服！样式好看！', reviewAuthor: '434388030', reviewStatus: true, discount: false},
-				{sourceUrl: '//item.mi.com/1161000034.html', imgUrl: '//i3.mifile.cn/a4/T1L_D_B7Jv1RXrhCrK.jpg', title: '小米短袖T恤  五彩环', price: '29'}
+				{moreUrl: '//list.mi.com/22', sourceUrl: '//item.mi.com/1161000034.html', imgUrl: '//i3.mifile.cn/a4/T1L_D_B7Jv1RXrhCrK.jpg', title: '小米短袖T恤  五彩环', price: '29'}
 			],
 			rabbit: [
 				{sourceUrl: '//item.mi.com/1162200024.html', imgUrl: '//i1.mifile.cn/a1/pms_1464943812.60215816!220x220.jpg', title: '超脑米兔钥匙扣', price: '29', oldPrice: '328', heat: '328',
@@ -89,7 +89,7 @@ export default {
 				reviewDesc: '好可爱的一直米兔，衣服做的不错，而且合身', reviewAuthor: '小米东升哥', reviewStatus: true, discount: false},
 				{sourceUrl: '//item.mi.com/1141500018.html', imgUrl: '//i3.mifile.cn/a4/T1qvEgBKKv1RXrhCrK.jpg', title: '30cm坐姿米兔', price: '49', oldPrice: '971', heat: '971',
 				reviewDesc: '很好很可爱。家里人很喜欢。值得拥有！', reviewAuthor: '247908452', reviewStatus: true, discount: false},
-				{sourceUrl: '//item.mi.com/1144400047.html', imgUrl: '//i1.mifile.cn/a1/T1MBhvBm_T1RXrhCrK!220x220.jpg', title: '黑猫米兔', price: '39'}
+				{moreUrl: 'http://mitu.mi.com/', sourceUrl: '//item.mi.com/1144400047.html', imgUrl: '//i1.mifile.cn/a1/T1MBhvBm_T1RXrhCrK!220x220.jpg', title: '黑猫米兔', price: '39'}
 			],
 			around: [
 				{sourceUrl: '//item.mi.com/1144600004.html', imgUrl: '//i3.mifile.cn/a4/T1yo_gBm_v1RXrhCrK.jpg', title: '金属鼠标垫 小号', price: '49', oldPrice: '199', heat: '8397',
@@ -106,7 +106,7 @@ export default {
 				reviewDesc: '百变杯随心杯，把家人萌照贴上，真是暖在心喔。', reviewAuthor: '167050409', reviewStatus: true, discount: false},
 				{sourceUrl: '//item.mi.com/1154900068.html', imgUrl: '//i1.mifile.cn/a1/T1eKdgB4xv1RXrhCrK!220x220.jpg', title: '小米电源线收纳盒', price: '49 ', oldPrice: '199', heat: '2045',
 				reviewDesc: '简洁大方，支持小米。', reviewAuthor: '古国龙', reviewStatus: true, discount: false},
-				{sourceUrl: '//item.mi.com/1161000016.html', imgUrl: '//i3.mifile.cn/a4/T15AxgByEv1RXrhCrK.jpg', title: '小米鼠标垫', price: '4.9'}
+				{moreUrl: '//list.mi.com/20', sourceUrl: '//item.mi.com/1161000016.html', imgUrl: '//i3.mifile.cn/a4/T15AxgByEv1RXrhCrK.jpg', title: '小米鼠标垫', price: '4.9'}
 			],
 			bags: [
 				{sourceUrl: '//item.mi.com/1153700020.html', imgUrl: '//i3.mifile.cn/a4/T1RRCjBKJv1RXrhCrK.jpg', title: '90分旅行箱 20寸', price: '299', oldPrice: '', heat: '1.4万',
@@ -123,7 +123,7 @@ export default {
 				reviewDesc: '设计很美，里面很多分隔，女儿很喜欢', reviewAuthor: '良槎水月宫', reviewStatus: true, discount: false},
 				{sourceUrl: '//item.mi.com/1154400037.html', imgUrl: '//i1.mifile.cn/a1/T1jZD_BmAv1RXrhCrK!220x220.jpg', title: '小米多功能电脑包', price: '199', oldPrice: '', heat: '1617',
 				reviewDesc: '比想象中的实用，好多袋子，出差的选择。不用一堆东西搅...', reviewAuthor: '105870213', reviewStatus: true, discount: false},
-				{sourceUrl: '//item.mi.com/1134900281.html', imgUrl: '//i1.mifile.cn/a1/T1nmhTBTKT1RXrhCrK!220x220.jpg', title: '小米商务真皮钱包', price: '99'}
+				{moreUrl: '//list.mi.com/23', sourceUrl: '//item.mi.com/1134900281.html', imgUrl: '//i1.mifile.cn/a1/T1nmhTBTKT1RXrhCrK!220x220.jpg', title: '小米商务真皮钱包', price: '99'}
 			]
 		}
 	},

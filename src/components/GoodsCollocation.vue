@@ -8,9 +8,6 @@
 					@mouseenter="topSubEnter(sub.key)">{{sub.name}}</li>
 			</ul>
 		</div>
-		<!-- <goods-top
-			:top-title="topTitle"
-			:subs="subs"></goods-top> -->
 		<div class="goods-content clearfix">
 			<goods-left
 				:left-goods="leftGoods"
@@ -57,7 +54,7 @@ export default {
 					price: '29', oldPrice: '149', heat: '5.5万', reviewDesc: '比我以前买的小米充电宝砖头好太多了！放在包里不占位置...', reviewAuthor: '龚毅祥', reviewStatus: false},
 				{sourceUrl: '//item.mi.com/1154300036.html', imgUrl: '//i2.mifile.cn/a1/T1F5K_BjVv1RXrhCrK.jpg?width=150&height=150', 'title': '小米小钢炮蓝牙音箱2',
 					price: '129', oldPrice: '149', heat: '1.2万', reviewDesc: '比我以前买的小米充电宝砖头好太多了！放在包里不占位置...', reviewAuthor: '龚毅祥', reviewStatus: false},
-				{sourceUrl: '//item.mi.com/1161800005.html', imgUrl: '//i2.mifile.cn/a1/T15hZ_BsDv1RXrhCrK.jpg?width=80&height=80', 'title': '小米小钢炮蓝牙音箱 青春版 象牙白', price: '99'}
+				{moreUrl: '//list.mi.com/dapei', sourceUrl: '//item.mi.com/1161800005.html', imgUrl: '//i2.mifile.cn/a1/T15hZ_BsDv1RXrhCrK.jpg?width=80&height=80', 'title': '小米小钢炮蓝牙音箱 青春版 象牙白', price: '99'}
 			],
 			headset: [
 				{sourceUrl: '//www.mi.com/huosai2/', imgUrl: '//i3.mifile.cn/a4/T1..W_Bvxv1RXrhCrK.jpg', 'title': '小米活塞耳机 基础版',
@@ -74,7 +71,7 @@ export default {
 					price: '69', oldPrice: '149', heat: '7513', reviewDesc: '小巧，便携，连接方便还有电量显示！总体很不错，可以挂...', reviewAuthor: '佰亊柒禧', reviewStatus: true},
 				{sourceUrl: '//www.mi.com/pocketaudio/', imgUrl: '//i1.mifile.cn/a1/T1yf__BjAT1RXrhCrK!220x220.jpg', 'title': '小米蓝牙音箱',
 					price: '199', oldPrice: '8.8', heat: '1.9万', reviewDesc: '还可以插内存卡，可以插线播放，音质很棒，如果体积大点...', reviewAuthor: '422979039', reviewStatus: true},
-				{sourceUrl: '//www.mi.com/speaker/', imgUrl: '//i1.mifile.cn/a1/T15hZ_BsDv1RXrhCrK!220x220.jpg', 'title': '小米小钢炮蓝牙音箱 青春版', price: '99'}
+				{moreUrl: '//list.mi.com/17', sourceUrl: '//www.mi.com/speaker/', imgUrl: '//i1.mifile.cn/a1/T15hZ_BsDv1RXrhCrK!220x220.jpg', 'title': '小米小钢炮蓝牙音箱 青春版', price: '99'}
 			],
 			power: [
 				{sourceUrl: '//www.mi.com/dianyuan5000/', imgUrl: '//i3.mifile.cn/a4/T1AcE_Bghv1RXrhCrK.jpg', 'title': '移动电源5000mAh',
@@ -91,7 +88,7 @@ export default {
 					price: '49', oldPrice: '149', heat: '24.7万', reviewDesc: '做工沒的說，摸起來手感非常細膩，而且比起傳統的插線板...', reviewAuthor: '林岐城', reviewStatus: true},
 				{sourceUrl: '//www.mi.com/chongdianqi4kou/', imgUrl: '//i1.mifile.cn/a1/T1vFEjBbWT1RXrhCrK!220x220.jpg', 'title': '小米USB充电器（4口）',
 					price: '69', oldPrice: '8.8', heat: '7051', reviewDesc: '挺不错哒小巧精致非常使用，支持快充', reviewAuthor: '朋哥441035', reviewStatus: true},
-				{sourceUrl: '//item.mi.com/1154500022.html', imgUrl: '//i3.mifile.cn/a4/T1Ihd_BTCv1RXrhCrK.jpg', 'title': '小米插线板 5孔位', price: '39'}
+				{moreUrl: '//list.mi.com/11', sourceUrl: '//item.mi.com/1154500022.html', imgUrl: '//i3.mifile.cn/a4/T1Ihd_BTCv1RXrhCrK.jpg', 'title': '小米插线板 5孔位', price: '39'}
 			],
 			battery: [
 				{sourceUrl: '//item.mi.com/1134900527.html', imgUrl: '//i1.mifile.cn/a1/T1sRhTBsYT1RXrhCrK!220x220.jpg', 'title': 'SanDisk 16GB存储卡（Class4）',
@@ -108,7 +105,7 @@ export default {
 					price: '49', oldPrice: '149', heat: '2367', reviewDesc: '终于出了充电电池，外形时尚，喜欢', reviewAuthor: '吴国立', reviewStatus: true},
 				{sourceUrl: '//item.mi.com/1154400043.html', imgUrl: '//i1.mifile.cn/a1/T142A_BXEv1RXrhCrK!220x220.jpg', 'title': '小米车载充电器',
 					price: '49', oldPrice: '8.8', heat: '3万', reviewDesc: '很好，个头小能量大，很满意', reviewAuthor: '你再猜猜啊', reviewStatus: true},
-				{sourceUrl: '//item.mi.com/1152400014.html', imgUrl: '//i1.mifile.cn/a1/T1_lKvBKZT1RXrhCrK!220x220.jpg', 'title': '红米2/红米2A能量套装', price: '69'}
+				{moreUrl: '//list.mi.com/135', sourceUrl: '//item.mi.com/1152400014.html', imgUrl: '//i1.mifile.cn/a1/T1_lKvBKZT1RXrhCrK!220x220.jpg', 'title': '红米2/红米2A能量套装', price: '69'}
 			]
 		}
 	},

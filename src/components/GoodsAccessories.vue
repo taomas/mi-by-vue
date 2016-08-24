@@ -36,8 +36,8 @@ export default {
 			currGoods: [],
 			topSubStatus: 'hot',
 			leftGoods: [
-				{imgUrl: 'http://i3.mifile.cn/a4/aa163c95-2890-4227-967c-a05ccec6c4a9'},
-				{imgUrl: 'http://i3.mifile.cn/a4/363032e6-b043-4854-a8cc-8909df918f02'}
+				{sourceUrl: '//list.mi.com/30', imgUrl: 'http://i3.mifile.cn/a4/aa163c95-2890-4227-967c-a05ccec6c4a9'},
+				{sourceUrl: '//www.mi.com/powerstrip/', imgUrl: 'http://i3.mifile.cn/a4/363032e6-b043-4854-a8cc-8909df918f02'}
 			],
 			hot: [
 				{sourceUrl: '//item.mi.com/1153300034.html', imgUrl: '//i2.mifile.cn/a1/T1COAjB7WT1RXrhCrK.jpg?width=150&height=150', title: '指环式防滑手机支架', price: '12.5', oldPrice: '149', heat: '8087',
@@ -54,7 +54,7 @@ export default {
 				reviewDesc: '', reviewAuthor: '', reviewStatus: false},
 				{sourceUrl: '//item.mi.com/1144900003.html', imgUrl: '//i2.mifile.cn/a1/T1_8YvBKJT1RXrhCrK.jpg?width=150&height=150', title: '功夫米兔手机支架', price: '19', oldPrice: '149', heat: '1.9万',
 				reviewDesc: '', reviewAuthor: '', reviewStatus: false},
-				{sourceUrl: '//item.mi.com/1154100024.html', imgUrl: '//i2.mifile.cn/a1/T1Zp__B5Ev1RXrhCrK.jpg?width=80&height=80', title: 'ZMI无限拓展数据线 120cm', price: '29'}
+				{moreUrl: '//list.mi.com/pjrm', sourceUrl: '//item.mi.com/1154100024.html', imgUrl: '//i2.mifile.cn/a1/T1Zp__B5Ev1RXrhCrK.jpg?width=80&height=80', title: 'ZMI无限拓展数据线 120cm', price: '29'}
 			],
 			protect: [
 				{sourceUrl: '//item.mi.com/1160800014.html', imgUrl: '//i1.mifile.cn/a1/T12AWgB5Vv1RXrhCrK!220x220.jpg', title: '小米手机5 智能翻盖保护套', price: '49', oldPrice: '149', heat: '1.5万',
@@ -71,7 +71,7 @@ export default {
 				reviewDesc: '很好的手机保护套，质量ok ', reviewAuthor: 'binarystar1989', reviewStatus: true},
 				{sourceUrl: '//item.mi.com/1142900047.html', imgUrl: '//i1.mifile.cn/a1/T11eEvBmYT1RXrhCrK!220x220.jpg', title: '小米手机4 智能唤醒翻盖保护套', price: '1549', oldPrice: '149', heat: '11.5万',
 				reviewDesc: '小米4保护套一下买了两个，玫红和柠檬绿，生活如此多娇！', reviewAuthor: '゛ロ隹╲ー', reviewStatus: true},
-				{sourceUrl: '//item.mi.com/1155100020.html', imgUrl: '//i1.mifile.cn/a1/T1QKJ_BvLv1RXrhCrK!220x220.jpg', title: '平板2保护套', price: '69'}
+				{moreUrl: '//list.mi.com/7', sourceUrl: '//item.mi.com/1155100020.html', imgUrl: '//i1.mifile.cn/a1/T1QKJ_BvLv1RXrhCrK!220x220.jpg', title: '平板2保护套', price: '69'}
 			],
 			fiol: [
 				{sourceUrl: '//item.mi.com/1160800004.html', imgUrl: '//i3.mifile.cn/a4/T1cVLjBX_v1RXrhCrK.jpg', title: '小米手机5 极薄防蓝光贴膜', price: '49', oldPrice: '149', heat: '6324',
@@ -88,7 +88,7 @@ export default {
 				reviewDesc: '膜的质量很好，不粘指纹，', reviewAuthor: ' 乱世风凌乱', reviewStatus: true},
 				{sourceUrl: '//item.mi.com/1162500021.html', imgUrl: '//i1.mifile.cn/a1/pms_1469787992.44385373!220x220.jpg', title: '红米Pro 标准高透贴膜', price: '19', oldPrice: '149', heat: '437',
 				reviewDesc: '很好，物流非常快，还有贴膜的方法，并且附赠两张贴膜放...', reviewAuthor: '1123887372', reviewStatus: true},
-				{sourceUrl: '//item.mi.com/1160800005.html', imgUrl: '//i1.mifile.cn/a1/T1keE_BsJv1RXrhCrK!220x220.jpg ', title: '小米手机5 标准高透贴膜', price: '19'}
+				{moreUrl: '//list.mi.com/9', sourceUrl: '//item.mi.com/1160800005.html', imgUrl: '//i1.mifile.cn/a1/T1keE_BsJv1RXrhCrK!220x220.jpg ', title: '小米手机5 标准高透贴膜', price: '19'}
 			],
 			other: [
 				{sourceUrl: '//item.mi.com/1152500016.html', imgUrl: '//i1.mifile.cn/a1/T1xXxQBCVT1RXrhCrK!220x220.jpg', title: '小蚁蓝牙遥控器', price: '39', oldPrice: '149', heat: '2778',
@@ -105,7 +105,7 @@ export default {
 				reviewDesc: '早点出多好啊！盒子不卡了！电脑下载不卡顿了！神药啊！...', reviewAuthor: '水云间789', reviewStatus: true},
 				{sourceUrl: '//item.mi.com/1154100024.html', imgUrl: '//i1.mifile.cn/a1/T1Zp__B5Ev1RXrhCrK!220x220.jpg', title: 'ZMI无限拓展数据线', price: '29', oldPrice: '149', heat: '4719',
 				reviewDesc: '长度够用，牢固，质量不错', reviewAuthor: '396139651', reviewStatus: true},
-				{sourceUrl: '//item.mi.com/1154900025.html', imgUrl: '//i1.mifile.cn/a1/T1_7KgB4Jv1RXrhCrK!220x220.jpg', title: '青米USB快速充电数据线', price: '24.9'}
+				{moreUrl: '//list.mi.com/others', sourceUrl: '//item.mi.com/1154900025.html', imgUrl: '//i1.mifile.cn/a1/T1_7KgB4Jv1RXrhCrK!220x220.jpg', title: '青米USB快速充电数据线', price: '24.9'}
 			]
 		}
 	},
