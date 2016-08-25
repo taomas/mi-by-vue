@@ -6,7 +6,7 @@
     <top-sub></top-sub>
     <goods></goods>
     <temp-footer></temp-footer>
-    <play-video></play-video>
+    <play-video :play-config="playConfig"></play-video>
   </div>
 </template>
 
@@ -22,11 +22,18 @@ import PlayVideo from './components/common/PlayVideo'
 export default {
   data () {
     return {
-      playStatus: false
+      playConfig: {}
     }
   },
+  ready () {
+    this.recivePlayVideo()
+  },
   methods: {
-    
+    recivePlayVideo () {
+      this.$on('play', function (opts) {
+        this.playConfig = opts
+      })
+    }
   },
   components: {
     'top-bar': TopBar,
