@@ -5,6 +5,8 @@
 				v-for="goods in currGoods"
 				v-if="$index < currGoods.length - 1">
 				<li class="goods-right-item">
+					<span class="discount-label"
+						:class="goods.discountType">{{goods.discount}}</span>
 					<a :href="goods.sourceUrl" target="_blank">
 						<img :src="goods.imgUrl" alt="" />
 						<h3 class="goods-title">{{goods.title}}</h3>
@@ -12,7 +14,7 @@
 					<p class="goods-price">
 						{{goods.price}}元
 						<span
-							v-if="goods.discount"
+							v-if="goods.discountType === 'discount'"
 							class="old-price">
 							{{goods.oldPrice}}元
 						</span>
@@ -114,6 +116,32 @@ export default {
 			opacity: 1;
 		}
 	}
+	.discount-label {
+		position: absolute;
+		top: 0;
+		left: 50%;
+		width: 64px;
+		height: 20px;
+		line-height: 20px;
+		margin-left: -32px;
+		font-size: 12px;
+		text-align: center;
+		color: #fff;
+		z-index: 4;
+		&.free {
+			background-color: #ffac13;
+		}
+		&.new {
+			background-color: #83c44e;
+		}
+		&.discount {
+			background-color: #e53935;
+		}
+	}
+	.old-price {
+		color: #b0b0b0;
+		text-decoration: line-through;
+	}
 	img {
 		display: block;
 		width: 160px;
@@ -133,10 +161,6 @@ export default {
 		color: #ff6700;
 		font-size: 14px;
 		text-align: center;
-		.old-price {
-			color: #b0b0b0;
-			text-decoration: line-through;
-		}
 	}
 	.goods-rank {
 		margin: 0 10px;

@@ -1,5 +1,5 @@
 <template>
-	<div class="footer-wrap">
+	<footer class="footer-wrap">
 		<div class="footer">
 			<div class="footer-service">
 				<ul class="service clearfix">
@@ -159,7 +159,7 @@
 					<img class="logo-img" src="http://s01.mifile.cn/i/logo-footer.png?v2" alt="" />
 					<div class="explan-content">
 						<ul class="links clearfix">
-							<li class="link-item"><a href="//www.mi.com/index.html" target="_blank">小米商城</a></li>
+							<li class="link-item"><a href="//www.mi.com/index.html">小米商城</a></li>
 							<li class="link-item"><a href="http://www.miui.com/" target="_blank">MIUI</a></li>
 							<li class="link-item"><a href="http://www.miliao.com/" target="_blank">米聊</a></li>
 							<li class="link-item"><a href="http://www.duokan.com/" target="_blank">多看书城</a></li>
@@ -173,7 +173,7 @@
 							<li class="link-item"><a href="javascript:void(0)">Select Region</a></li>
 						</ul>
 						<p class="explan-txt">
-							©<a href="#">mi.com</a> 京ICP证110507号 京ICP备10046444号 <a href="#">京公网安备11010802020134号 </a> <a href="#">京网文[2014]0059-0009号</a><br/>
+							©<a href="//www.mi.com/index.html">mi.com</a> 京ICP证110507号 京ICP备10046444号 <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802020134" target="_blank">京公网安备11010802020134号 </a> <a href="//c1.mifile.cn/f/i/2013/cn/jingwangwen.jpg" target="_blank">京网文[2014]0059-0009号</a><br/>
 							 违法和不良信息举报电话：185-0130-1238，本网站所列数据，除特殊说明，所有数据均出自我司实验室测试
 						</p>
 					</div>
@@ -187,7 +187,7 @@
 				</p>
 			</div>
 		</div>
-	</div>
+	</footer>
 </template>
 
 <script>

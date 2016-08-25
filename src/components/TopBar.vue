@@ -1,5 +1,5 @@
 <template>
-  <div class="top-container">
+  <header class="top-container">
 		<div class="top-bar clearfix">
 			<div class="topbar-nav">
 				<ul class="nav-wrap">
@@ -37,7 +37,7 @@
 			</div>
 
 		</div>
-  </div>
+  </header>
 </template>
 
 <script>
