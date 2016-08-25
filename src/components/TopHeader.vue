@@ -13,7 +13,7 @@
 							>{{item.name}}</a>
 						</template>
 						<template v-else>
-							<a href="javascript: void(0);" class="nav-item">{{item.name}}</a>
+							<a :href="item.sourceUrl" target="_blank" class="nav-item">{{item.name}}</a>
 						</template>
 					</li>
 				</ul>
@@ -129,8 +129,8 @@ export default {
 				{name: '盒子 · 影音', type: 'box'},
 				{name: '路由器', type: 'router'},
 				{name: '智能硬件', type: 'hardware'},
-				{name: '服务'},
-				{name: '社区'}
+				{name: '服务', sourceUrl: '//www.mi.com/service/'},
+				{name: '社区', sourceUrl: 'http://www.xiaomi.cn'}
 			],
 			results: [
 				{name: '小米手机5', number: '11'},
@@ -216,12 +216,17 @@ export default {
 }
 
 .navs {
+	height: 88px;
+	line-height: 88px;
 	margin: 0;
 	padding: 0;
 	list-style: none;
 	.nav {
 		display: inline-block;
 		.nav-item {
+			display: block;
+			height: 88px;
+			line-height: 88px;
 			font-size: 16px;
 			padding: 0 10px;
 			text-decoration: none;
