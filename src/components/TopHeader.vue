@@ -44,7 +44,9 @@
 		</div>
 		<div class="header-menu"
 			@mouseenter="evtHeaderEnter()"
-			@mouseleave="evtHeaderLeave()">
+			@mouseleave="evtHeaderLeave()"
+			v-show="headerStatus"
+			transition="fadein">
 			<ul class="menus clearfix">
 				<li class="product" v-for="item in currentPhones">
 					<a :href="item.sourcePath">
@@ -66,7 +68,7 @@ export default {
 		return {
 			hotStatus: true,
 			headerStatus: false,
-			tids: [],
+			tids: '',
 			currentPhones: this.xiaomi,
 			hotItems: ['红米pro', '小米笔记本air'],
 			xiaomi: [
@@ -158,34 +160,17 @@ export default {
 			this.hotStatus = true
 		},
 		evtHeaderEnter (menuType) {
-			const $menu = $('.header-menu')
 			if (menuType) {
 				this.currentPhones = this[menuType]
 			}
-			this.tids.forEach((tid) => {
-				clearTimeout(tid)
-			})
-			$menu.show().animate({
-				height: '230px',
-				opacity: '1'
-			}, 300)
 			this.headerStatus = true
+			clearTimeout(this.tids)
 		},
 		evtHeaderLeave () {
-			const $menu = $('.header-menu')
-			const self = this
-			var tid = setTimeout(() => {
-				$menu.animate({
-					height: '0',
-					opacity: '0'
-				}, 300, () => {
-					if (!self.headerStatus) { // fix关闭动画未完成触发显示后会再次关闭bug
-						$menu.hide()
-					}
-				})
+			let self = this
+			this.tids = setTimeout(function () {
+				self.headerStatus = false
 			}, 300)
-			this.tids.push(tid)
-			this.headerStatus = false
 		}
 	},
 	components: {
@@ -360,7 +345,6 @@ export default {
 	position: absolute;
 	left: 0;
 	top: 140px;
-	display: none;
 	width: 100%;
 	height: 230px;
 	background: #fff;
@@ -407,12 +391,14 @@ export default {
 	}
 }
 
-.expand-transition {
-  transition: all .5s linear;
+.fadein-transition {
+  transition: all .3s ease-in;
 	height: 230px;
+	opacity: 1;
+	overflow: hidden;
 }
 
-.expand-enter, .expand-leave {
+.fadein-enter, .fadein-leave {
   height: 0;
   opacity: 0;
 }

@@ -31,7 +31,9 @@
 							)
 					</a>
 				</div>
-				<div class="cart-list">
+				<div class="cart-list"
+          transition="fadein"
+          v-show="cartStatus">
 					购物车中还没有商品，赶快选购吧！
 				</div>
 			</div>
@@ -63,21 +65,13 @@ export default {
   },
 	methods: {
 		evtCartEnter: function () {
-      $('.cart-list').show()
-      $('.cart-list').animate({
-        'height': '96px',
-        'opacity': '1'
-      }, 300)
+      this.cartStatus = true
       clearInterval(this.timer)
 		},
     evtCartOut: function () {
+      let self = this
       this.timer = setTimeout(function () {
-        $('.cart-list').animate({
-          'height': '0',
-          'opacity': '0'
-        }, 300, function () {
-          $('.cart-list').hide() // 动画执行完后隐藏该元素
-        })
+        self.cartStatus = false
       }, 300)
     }
 	},
@@ -99,6 +93,7 @@ export default {
 	width: 1226px;
 	margin: 0 auto;
 	font-size: 12px;
+  z-index: 11;
 }
 
 .topbar-nav {
@@ -200,17 +195,26 @@ export default {
 }
 
 .cart-list {
-  display: none;
 	position: absolute;
 	right: 0;
-	top: 40px;
+	top: 39px;
   width: 316px;
-  height: 0;
+  height: 96px;
   line-height: 96px;
 	text-align: center;
 	color: #b0b0b0;
 	background: #fff;
 	box-shadow: 0 0 5px #ccc;
   z-index: 10;
+  overflow: hidden;
+}
+
+.fadein-transition {
+  transition: all .5s ease;
+  height: 96px;
+}
+
+.fadein-enter, .fadein-leave {
+  height: 0;
 }
 </style>
