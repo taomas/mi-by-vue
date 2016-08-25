@@ -26,13 +26,6 @@ export default {
 	},
 	watch: {
 		playConfig: function (newVal, oldVal) {
-			if (newVal.status) {
-				this.scrollTop = $('body').scrollTop()
-				console.log($('body').scrollTop())
-			} else {
-				$('body').scrollTop(this.scrollTop)
-				console.log('end', this.scrollTop)
-			}
 		}
 	},
 	methods: {

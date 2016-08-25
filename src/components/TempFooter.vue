@@ -4,24 +4,34 @@
 			<div class="footer-service">
 				<ul class="service clearfix">
 					<li class="service-item">
-						<span class="icon"><i class="fa fa-gavel"></i></span>
-						1小时快修服务
+						<a href="//www.mi.com/service/exchange#repaire" target="_blank">
+							<span class="icon"><i class="fa fa-gavel"></i></span>
+							1小时快修服务
+						</a>
 					</li>
 					<li class="service-item">
-						<span class="icon"><i class="fa fa-history"></i></span>
-						7天无条件退货
+						<a href="//www.mi.com/service/exchange#back" target="_blank">
+							<span class="icon"><i class="fa fa-history"></i></span>
+							7天无条件退货
+						</a>
 					</li>
 					<li class="service-item">
-						<span class="icon"><i class="fa fa-history"></i></span>
-						15天免费换货
+						<a href="//www.mi.com/service/exchange#free" target="_blank">
+							<span class="icon"><i class="fa fa-history"></i></span>
+							15天免费换货
+						</a>
 					</li>
 					<li class="service-item">
-						<span class="icon"><i class="fa fa-gift"></i></span>
-						满150元包邮
+						<a href="//www.mi.com/service/exchange#mail" target="_blank">
+							<span class="icon"><i class="fa fa-gift"></i></span>
+							满150元包邮
+						</a>
 					</li>
 					<li class="service-item">
-						<span class="icon"><i class="fa fa-location-arrow"></i></span>
-						520余家售后网点
+						<a href="//www.mi.com/static/maintainlocation/" target="_blank">
+							<span class="icon"><i class="fa fa-location-arrow"></i></span>
+							520余家售后网点
+						</a>
 					</li>
 				</ul>
 			</div>
@@ -30,87 +40,101 @@
 					<li class="footer-item">
 						<article class="col-links">
 							<h3>
-								<a href="#">帮助中心</a>
+								帮助中心
 							</h3>
 							<p>
-								<a href="#">账户管理</a>
+								<a href="//www.mi.com/service/account/register/" target="_blank">账户管理</a>
 							</p>
 							<p>
-								<a href="#">购物指南</a>
+								<a href="//www.mi.com/service/buy/buytime/" target="_blank">购物指南</a>
 
 							</p>
 							<p>
-								<a href="#">订单操作</a>
+								<a href="//www.mi.com/service/order/sendprogress/" target="_blank">订单操作</a>
 							</p>
 						</article>
 					</li>
 					<li class="footer-item">
 						<article class="col-links">
-							<h3>帮助中心</h3>
+							<h3>
+								服务支持
+							</h3>
 							<p>
-								账户管理
+								<a href="//www.mi.com/service/exchange" target="_blank">售后政策</a>
 							</p>
 							<p>
-								购物指南
+								<a href="http://fuwu.mi.com/" target="_blank">自助服务</a>
+
 							</p>
 							<p>
-								订单操作
-							</p>
-						</article>
-					</li>
-					<li class="footer-item">
-						<article class="col-links">
-							<h3>帮助中心</h3>
-							<p>
-								账户管理
-							</p>
-							<p>
-								购物指南
-							</p>
-							<p>
-								订单操作
+								<a href="http://xiazai.mi.com/" target="_blank">相关下载</a>
 							</p>
 						</article>
 					</li>
 					<li class="footer-item">
 						<article class="col-links">
-							<h3>帮助中心</h3>
+							<h3>
+								线下门店
+							</h3>
 							<p>
-								账户管理
+								<a href="//www.mi.com/c/xiaomizhijia/" target="_blank">小米之家</a>
 							</p>
 							<p>
-								购物指南
+								<a href="//www.mi.com/static/maintainlocation/" target="_blank">服务网点</a>
+
 							</p>
 							<p>
-								订单操作
-							</p>
-						</article>
-					</li>
-					<li class="footer-item">
-						<article class="col-links">
-							<h3>帮助中心</h3>
-							<p>
-								账户管理
-							</p>
-							<p>
-								购物指南
-							</p>
-							<p>
-								订单操作
+								<a href="//www.mi.com/static/familyLocation/" target="_blank">零售网点</a>
 							</p>
 						</article>
 					</li>
 					<li class="footer-item">
 						<article class="col-links">
-							<h3>帮助中心</h3>
+							<h3>
+								关于小米
+							</h3>
 							<p>
-								账户管理
+								<a href="//www.mi.com/about" target="_blank">了解小米</a>
 							</p>
 							<p>
-								购物指南
+								<a href="http://hr.xiaomi.com/" target="_blank">加入小米</a>
+
 							</p>
 							<p>
-								订单操作
+								<a href="//www.mi.com/about/contact" target="_blank">联系我们</a>
+							</p>
+						</article>
+					</li>
+					<li class="footer-item">
+						<article class="col-links">
+							<h3>
+								关注我们
+							</h3>
+							<p>
+								<a href="http://e.weibo.com/xiaomishouji" target="_blank">新浪微博</a>
+							</p>
+							<p>
+								<a href="http://xiaoqu.qq.com/mobile/share/index.html?url=http%3A%2F%2Fxiaoqu.qq.com%2Fmobile%2Fbarindex.html%3Fwebview%3D1%26type%3D%26source%3Dindex%26_lv%3D25741%26sid%3D%26_wv%3D5123%26_bid%3D128%26%23bid%3D10525%26from%3Dwechat" target="_blank">小米部落</a>
+							</p>
+							<p>
+								<a href="javascript:void(0)" target="_blank">官方微信</a>
+							</p>
+						</article>
+					</li>
+					<li class="footer-item">
+						<article class="col-links">
+							<h3>
+								特色服务
+							</h3>
+							<p>
+								<a href="//order.mi.com/queue/f2code" target="_blank">F码通道</a>
+							</p>
+							<p>
+								<a href="//www.mi.com/mimobile/" target="_blank">小米移动</a>
+
+							</p>
+							<p>
+								<a href="//order.mi.com/misc/checkitem" target="_blank">防伪查询</a>
 							</p>
 						</article>
 					</li>
@@ -120,10 +144,12 @@
 							<p class="phone-desc">
 								周一至周日 8:00-18:00<br/>（仅收市话费）
 							</p>
-							<span class="server-btn">
-								<i></i>
-								24小时在线客服
-							</span>
+							<a href="//www.mi.com/service/contact" target="_blank">
+								<span class="server-btn">
+									<i></i>
+									24小时在线客服
+								</span>
+							</a>
 						</div>
 					</li>
 				</ul>
@@ -133,18 +159,18 @@
 					<img class="logo-img" src="http://s01.mifile.cn/i/logo-footer.png?v2" alt="" />
 					<div class="explan-content">
 						<ul class="links clearfix">
-							<li class="link-item">小米商城</li>
-							<li class="link-item">MIUI</li>
-							<li class="link-item">米聊</li>
-							<li class="link-item">多看书城</li>
-							<li class="link-item">小米路由器</li>
-							<li class="link-item">视频电话</li>
-							<li class="link-item">小米后院</li>
-							<li class="link-item">小米天猫店</li>
-							<li class="link-item">小米淘宝直营店</li>
-							<li class="link-item">小米网盟</li>
-							<li class="link-item">问题反馈</li>
-							<li class="link-item">Select Region</li>
+							<li class="link-item"><a href="//www.mi.com/index.html" target="_blank">小米商城</a></li>
+							<li class="link-item"><a href="http://www.miui.com/" target="_blank">MIUI</a></li>
+							<li class="link-item"><a href="http://www.miliao.com/" target="_blank">米聊</a></li>
+							<li class="link-item"><a href="http://www.duokan.com/" target="_blank">多看书城</a></li>
+							<li class="link-item"><a href="http://www.miwifi.com/" target="_blank">小米路由器</a></li>
+							<li class="link-item"><a href="http://call.mi.com/" target="_blank">视频电话</a></li>
+							<li class="link-item"><a href="http://blog.xiaomi.com/" target="_blank">小米后院</a></li>
+							<li class="link-item"><a href="http://xiaomi.tmall.com/" target="_blank">小米天猫店</a></li>
+							<li class="link-item"><a href="http://shop115048570.taobao.com" target="_blank">小米淘宝直营店</a></li>
+							<li class="link-item"><a href="http://union.mi.com/" target="_blank">小米网盟</a></li>
+							<li class="link-item"><a href="javascript:void(0)">问题反馈</a></li>
+							<li class="link-item"><a href="javascript:void(0)">Select Region</a></li>
 						</ul>
 						<p class="explan-txt">
 							©<a href="#">mi.com</a> 京ICP证110507号 京ICP备10046444号 <a href="#">京公网安备11010802020134号 </a> <a href="#">京网文[2014]0059-0009号</a><br/>
