@@ -70,11 +70,12 @@ export default {
 		float: left;
 		width: 296px;
 		height: 415px;
-		padding: 0 0 14px 14px;
+		margin: 0 0 14px 14px;
 		cursor: pointer;
 		transition: all 0.3s;
+		background: #fff;
 		&:nth-child(1) {
-			padding-left: 0;
+			margin-left: 0;
 		}
 		&:hover {
 			transform: translateY(-3px);

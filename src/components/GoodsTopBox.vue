@@ -173,7 +173,7 @@ export default {
     }
     .old-price {
       color: #b0b0b0;
-      text-align: line-through;
+      text-decoration: line-through;
     }
     img {
       display: block;
