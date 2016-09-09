@@ -69,7 +69,7 @@
 export default {
 	props: {
 		currGoods: {
-			require: true,
+			required: true,
 			type: Array
 		}
 	},

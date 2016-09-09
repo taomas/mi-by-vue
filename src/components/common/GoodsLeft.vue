@@ -13,7 +13,7 @@
 export default {
 	props: {
 		leftGoods: {
-			require: true,
+			required: true,
 			type: Array
 		}
 	}

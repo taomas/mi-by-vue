@@ -71,7 +71,7 @@ export default {
 	},
 	props: {
 		content: {
-			require: true,
+			required: true,
 			type: Object
 		}
 	},
@@ -138,7 +138,7 @@ export default {
 		}
 	}
 	.first-desc {
-		margin-bottom: 60px; 
+		margin-bottom: 60px;
 	}
 }
 

@@ -12,7 +12,7 @@ export default {
 	},
 	props: {
 		title: {
-			require: true,
+			required: true,
 			type: String
 		}
 	}

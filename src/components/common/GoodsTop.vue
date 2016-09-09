@@ -20,11 +20,11 @@ export default {
 	},
 	props: {
 		subs: {
-			require: true,
+			required: true,
 			type: Array
 		},
 		topTitle: {
-			require: true,
+			required: true,
 			type: String
 		}
 	},

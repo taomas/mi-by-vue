@@ -1,8 +1,8 @@
 <template>
-	<div class="video-mask" v-show="playConfig.status">
+	<div class="video-mask" v-show="maskStatus">
 		<div class="video-content"
-			v-show="playConfig.status"
-			transition="fadeIn">
+			v-show="videoStatus"
+			transition="slideIn">
 			<div class="video-header clearfix">
 				<h3 class="title-txt">{{playConfig.title}}</h3>
 				<div class="cancel-link"
@@ -19,15 +19,28 @@
 
 <script>
 export default {
-	data () {
-		return {
-			scrollTop: 0
-		}
-	},
-	watch: {
-		playConfig: function (newVal, oldVal) {
-		}
-	},
+  data () {
+    return {
+      maskStatus: false
+    }
+  },
+  computed: {
+    videoStatus () {
+      return this.playConfig.status
+    }
+  },
+  watch: {
+    videoStatus (newVal, oldVal) {
+      const that = this
+      if (!newVal) {
+        setTimeout(function () {
+          that.maskStatus = that.videoStatus
+        }, 500)
+      } else {
+        that.maskStatus = that.videoStatus
+      }
+    }
+  },
 	methods: {
 		evtCancel () {
 			let config = {
@@ -102,13 +115,12 @@ export default {
 	height: 536px;
 }
 
-.fadeIn-transition {
+.slideIn-transition {
   transition: all .3s ease-out;
 	transform: translateY(30%);
-	will-change: transform;
 }
 
-.fadeIn-enter, .fadeIn-leave {
-	transform: translateY(0);
+.slideIn-enter, .slideIn-leave {
+	transform: translateY(-100%);
 }
 </style>
