@@ -11,7 +11,7 @@
 				</div>
 			</div>
 			<div class="video">
-				<iframe width="880" height="536" :src="playConfig.videoUrl" frameborder="0" allowfullscreen=""></iframe>
+				<iframe :src="playConfig.videoUrl" frameborder="0" allowfullscreen=""></iframe>
 			</div>
 		</div>
 	</div>
@@ -31,7 +31,7 @@ export default {
   },
   watch: {
     videoStatus (newVal, oldVal) {
-      const that = this
+      let that = this
       if (!newVal) {
         setTimeout(function () {
           that.maskStatus = that.videoStatus
@@ -113,6 +113,10 @@ export default {
 .video {
 	width: 880px;
 	height: 536px;
+  iframe {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .slideIn-transition {
