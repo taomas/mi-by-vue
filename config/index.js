@@ -1,6 +1,6 @@
 // see http://vuejs-templates.github.io/webpack for documentation.
 var path = require('path')
-var assetsPublicPath = (process.env.NODE_ENV === 'production') ? 'http://vue.wendaosanshou.top/mi/' : '/'
+var assetsPublicPath = (process.env.NODE_ENV === 'production') ? 'http://vue.fecss.com/mi/' : '/'
 
 module.exports = {
   build: {
